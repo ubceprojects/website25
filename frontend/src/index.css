@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Global Reset */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+:root {
+    --font-primary: "League Spartan", sans-serif;
+    --font-secondary: "Poppins", sans-serif;
+    --font-custom: "Sofia Pro Regular", sans-serif;
+    --font-custom-light: "Sofia Pro Light", sans-serif;
+    --font-custom-medium: "Sofia Pro Medium", sans-serif;
+    --font-custom-semibold: "Sofia Pro SemiBold", sans-serif;
+    --font-custom-bold: "Sofia Pro Bold", sans-serif;
+
+    --custom-black: #000000;
+    --custom-darkblue: #012241;
+    --custom-blue: #05527b;
+    --custom-lightblue: #0c88bf;
+    --white: #ffffff;
+}
