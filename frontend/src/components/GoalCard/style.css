@@ -1,0 +1,44 @@
+.goal-card {
+    width: 18vw;
+    height: 15vw;
+    background: var(--white);
+    border-radius: 24px;
+    box-shadow: 0px 4px 10px rgba(5, 82, 123, 0.9);
+    padding: 1.5vw 2vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.goal-heading {
+    font-size: 1.5vw;
+    color: var(--custom-blue);
+    font-weight: 600;
+    font-family: var(--font-primary);
+}
+
+.goal-content {
+    font-size: 1vw;
+    color: var(--custom-blue);
+    opacity: 0.98;
+    font-weight: light;
+    font-family: var(--font-secondary);
+    margin-top: 1vw;
+}
+
+.goal-number {
+    font-size: 2.5vw;
+    color: var(--white);
+    font-family: var(--font-custom-semibold);
+    background-color: var(--custom-darkblue);
+    width: 5vw;
+    height: 5vw;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -2vw;
+    left: -2vw;
+}

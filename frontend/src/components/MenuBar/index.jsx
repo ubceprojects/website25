@@ -68,15 +68,7 @@ const MenuBar = ({ type = "" }) => {
             >
                 Meet the Team
             </div>
-            <div className="menu-item hover">Sponsors</div>
-            <div
-                className="menu-item hover"
-                onClick={() => {
-                    navigate("/faq");
-                }}
-            >
-                FAQ
-            </div>
+            <div className="menu-item hover">Events & Sponsors</div>
             <div className="menu-socials menu-item">
                 <i className="fa-brands fa-linkedin-in"></i>
                 <i className="fa-brands fa-instagram"></i>
