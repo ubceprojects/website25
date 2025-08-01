@@ -107,49 +107,55 @@ const Masonry = ({ items, ease = "power3.out", duration = 0.6, stagger = 0.05, a
     }, [columns, items, width]);
 
     const hasMounted = useRef(false);
+    const hasAnimatedRef = useRef(false);
 
     useLayoutEffect(() => {
         if (!imagesReady) return;
 
-        grid.forEach((item, index) => {
-            const selector = `[data-key="${item.id}"]`;
-            const animationProps = {
-                x: item.x,
-                y: item.y,
-                width: item.w - 20,
-                height: item.h - 20,
-            };
+        const handleScroll = () => {
+            const scrollThreshold = 2700; // <-- Change this to your desired scrollY value
+            console.log(window.scrollY);
 
-            if (!hasMounted.current) {
-                const initialPos = getInitialPosition(item, index);
-                const initialState = {
-                    opacity: 0,
-                    x: initialPos.x,
-                    y: initialPos.y,
-                    width: item.w,
-                    height: item.h,
-                    ...(blurToFocus && { filter: "blur(10px)" }),
-                };
+            if (window.scrollY > scrollThreshold && !hasAnimatedRef.current && imagesReady) {
+                hasAnimatedRef.current = true;
 
-                gsap.fromTo(selector, initialState, {
-                    opacity: 1,
-                    ...animationProps,
-                    ...(blurToFocus && { filter: "blur(0px)" }),
-                    duration: 0.8,
-                    ease: "power3.out",
-                    delay: index * stagger,
+                grid.forEach((item, index) => {
+                    const selector = `[data-key="${item.id}"]`;
+                    const initialPos = getInitialPosition(item, index);
+                    const animationProps = {
+                        x: item.x,
+                        y: item.y,
+                        width: item.w - 20,
+                        height: item.h - 20,
+                    };
+
+                    gsap.fromTo(
+                        selector,
+                        {
+                            opacity: 0,
+                            x: initialPos.x,
+                            y: initialPos.y,
+                            width: item.w,
+                            height: item.h,
+                            ...(blurToFocus && { filter: "blur(10px)" }),
+                        },
+                        {
+                            opacity: 1,
+                            ...animationProps,
+                            ...(blurToFocus && { filter: "blur(0px)" }),
+                            duration: 0.8,
+                            ease: "power3.out",
+                            delay: index * stagger,
+                        }
+                    );
                 });
-            } else {
-                gsap.to(selector, {
-                    ...animationProps,
-                    duration: duration,
-                    ease: ease,
-                    overwrite: "auto",
-                });
+                hasMounted.current = true;
             }
-        });
+        };
 
-        hasMounted.current = true;
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [grid, imagesReady, stagger, animateFrom, blurToFocus, duration, ease]);
 
