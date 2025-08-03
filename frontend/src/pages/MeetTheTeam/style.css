@@ -1,0 +1,107 @@
+.meet-container {
+    width: 100vw;
+    min-height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-top: 0;
+    margin-top: 0;
+    background-color: #ffffff;
+}
+
+.meet-heading {
+    width: 100vw;
+    height: 53vw;
+    background: linear-gradient(to right, #012241 0%, #0C88BF 76%);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 5vw;
+}
+
+.heading-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vw;
+}
+
+.meet-heading h1 {
+    font-size: 3.5vw;
+    color: var(--white);
+    text-align: left;
+    font-weight: bold;
+    font-family: var(--font-primary);
+    margin: 0;
+}
+
+.meet-heading h2 {
+    font-size: 2vw;
+    color: var(--white);
+    text-align: left;
+    font-weight: normal;
+    font-family: var(--font-primary);
+    max-width: 80vw;
+    line-height: 1.4;
+    margin: 0;
+    margin-top: 2vw;
+}
+
+.search-buttons {
+    display: flex;
+    gap: 2vw;
+    margin-top: 8vw;
+    justify-content: center;
+    width: 100%;
+    margin-left: 5vw;
+}
+
+.search-input {
+    font-size: 1.2vw;
+    border-radius: 0.5vw;
+    background-color: rgb(253, 253, 253);
+    color: white;
+    min-width: 18vw;
+    padding: 0.8vw 1.2vw;
+    height: 3.5vw;
+    box-sizing: border-box;
+}
+
+.search-input::placeholder {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.filter-select {
+    padding: 0.8vw 1.2vw;
+    font-size: 1.2vw;
+    border-radius: 0.5vw;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    min-width: 18vw;
+    cursor: pointer;
+    height: 3.5vw;
+    box-sizing: border-box;
+}
+
+.filter-select option {
+    background-color: #ffffff;
+    color: rgb(255, 255, 255);
+}
+
+.team-profiles {
+    padding: 5vw;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3vw;
+    justify-content: center;
+    max-width: 90vw;
+    margin: 0 auto;
+    min-height: 50vh;
+}
+
+.team-profiles .card {
+    flex: 0 0 calc(33.333% - 2vw) !important;
+    width: calc(33.333% - 2vw) !important;
+    min-width: 15vw;
+    max-width: 18vw;
+    height: auto !important;
+    min-height: 35vh;
+}
