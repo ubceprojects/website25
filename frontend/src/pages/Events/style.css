@@ -11,8 +11,8 @@
     height: 100vw;
     margin-top: -10vw;
     margin-left: -10vw;
-    background: linear-gradient(180deg, rgba(1, 34, 65, 1) 30%, rgba(12, 136, 191, 1) 120%);
-    border-radius: 0% 0% 70% 70%;
+    background: linear-gradient(180deg,  rgba(12, 136, 191, 1) 5%, rgba(1, 34, 65, 1) 100%);
+    border-radius: 0% 0% 50% 50%;
     box-shadow: 0px -20px 20px rgba(3, 44, 76, 0.6);
     position: relative;
     overflow-x: hidden;
@@ -27,8 +27,8 @@
   }
   
   .events-upcoming-heading h2 {
-    font-size: 6vw;
-    margin: 0;
+    font-size: 4.5vw;
+    margin-top: 4vw;
     color: var(--white);
     font-weight: bold;
     font-family: var(--font-primary);
@@ -59,12 +59,14 @@
     font-weight: 700;
     color: #001b44;
     margin: 1vh 0;
+    font-family: var(--font-primary);
   }
   
   .events-sponsors-section p {
     font-size: 1.25vw;
     color: #001b44;
     margin-bottom: 5vh;
+    font-family: var(--font-primary);
   }
   
   .events-sponsors-logos {
@@ -105,6 +107,7 @@
     text-decoration: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    font-family: var(--font-primary);
   }
   
   .events-sponsor-button:hover {
