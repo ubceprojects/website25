@@ -61,13 +61,13 @@
 
 .about-journey-heading {
     width: 70vw;
-    padding-top: 10vw;
+    padding-top: 15vw;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .about-journey-heading h2 {
-    font-size: 6vw;
+    font-size: 4vw;
     margin-bottom: 0vw;
     color: var(--white);
     font-weight: bold;
@@ -80,6 +80,7 @@
     margin: auto;
     margin-top: -10vw;
     background: url("journey-path.svg") no-repeat center;
+    background-size: 70%;
 }
 
 .about-journey-card {
@@ -91,22 +92,22 @@
 }
 
 .journey-1 {
-    bottom: 5vw;
-    left: 25vw;
+    bottom: 6vw;
+    left: 30vw;
 }
 
 .journey-2 {
-    bottom: 17vw;
+    bottom: 15vw;
     left: 56vw;
 }
 
 .journey-3 {
-    bottom: 31vw;
-    left: 85vw;
+    bottom: 29vw;
+    left: 82vw;
 }
 
 .journey-heading {
-    font-size: 2.5vw;
+    font-size: 2.4vw;
     color: var(--white);
     font-family: var(--font-custom-semibold);
 }
@@ -121,7 +122,7 @@
 }
 
 .journey-number {
-    font-size: 15vw;
+    font-size: 14vw;
     font-family: var(--font-primary);
     font-weight: 800;
     color: var(--custom-lightblue);
@@ -142,7 +143,7 @@
 }
 
 .number-3 {
-    right: -3.5vw;
+    right: -3vw;
     bottom: -2.5vw;
     z-index: -1;
 }
