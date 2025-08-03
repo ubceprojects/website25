@@ -1,0 +1,112 @@
+.events-container {
+    width: 100vw;
+    padding-top: 7vw;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+  
+
+  .events-upcoming-container {
+    width: 120vw;
+    height: 100vw;
+    margin-top: -10vw;
+    margin-left: -10vw;
+    background: linear-gradient(180deg, rgba(1, 34, 65, 1) 30%, rgba(12, 136, 191, 1) 120%);
+    border-radius: 0% 0% 70% 70%;
+    box-shadow: 0px -20px 20px rgba(3, 44, 76, 0.6);
+    position: relative;
+    overflow-x: hidden;
+  }
+  
+  .events-upcoming-heading {
+    width: 70vw;
+    padding-top: 10vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .events-upcoming-heading h2 {
+    font-size: 6vw;
+    margin: 0;
+    color: var(--white);
+    font-weight: bold;
+    font-family: var(--font-primary);
+  }
+  
+  /* Curved transition to sponsors */
+  .events-bottom-curve {
+    width: 100%;
+    height: 15vh;
+    background-color: #ffffff;
+    border-top-left-radius: 100% 50%;
+    border-top-right-radius: 100% 50%;
+    position: relative;
+    z-index: 5;
+  }
+  
+  /* Sponsors section */
+  .events-sponsors-section {
+    background-color: #ffffff;
+    text-align: center;
+    padding: 5vh 2vw;
+    position: relative;
+    z-index: 10;
+  }
+  
+  .events-sponsors-section h2 {
+    font-size: 3vw;
+    font-weight: 700;
+    color: #001b44;
+    margin: 1vh 0;
+  }
+  
+  .events-sponsors-section p {
+    font-size: 1.25vw;
+    color: #001b44;
+    margin-bottom: 5vh;
+  }
+  
+  .events-sponsors-logos {
+    display: flex;
+    justify-content: center;
+    gap: 4vw;
+    flex-wrap: wrap;
+    margin-bottom: 5vh;
+  }
+  
+  .sponsor-logo {
+    width: 20vw;
+    height: 20vw;
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 50%;
+    background-color: #eee; /* Replace with your sponsor image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.2vw;
+    color: #001b44;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  }
+  
+  .events-sponsor-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #001b44;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 6px;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .events-sponsor-button:hover {
+    background-color: #003366;
+  }

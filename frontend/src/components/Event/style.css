@@ -1,0 +1,43 @@
+.event-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5vh;
+    max-width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .event-image-container {
+    flex: 0 0 auto;
+    width: 35vw;
+    max-width: 500px;
+    margin-right: 3vw;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .event-image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .event-content {
+    flex: 1;
+    color: #ffffff; /* Adjust for your dark background */
+  }
+  
+  .event-title {
+    font-size: 3vw;
+    margin: 0 0 1vh;
+    font-weight: 700;
+  }
+  
+  .event-description {
+    font-size: 1.25vw;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  

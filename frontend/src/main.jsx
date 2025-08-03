@@ -4,6 +4,7 @@ import "./index.css";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import MeetTheTeam from "./pages/MeetTheTeam";
+import Events from "./pages/Events";
 
 const router = createBrowserRouter([
     {
@@ -20,6 +21,11 @@ const router = createBrowserRouter([
         exact: true,
         path: "/team",
         element: <MeetTheTeam />,
+    },
+    {
+        exact: true,
+        path: "/events",
+        element: <Events />,
     },
 ]);
 
