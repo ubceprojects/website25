@@ -12,14 +12,14 @@
   .text-container {
     width: 90%;
     max-width: 600px;
-    margin-left: 5vw; 
+    margin-left: 15vw; 
     margin-top: 30vh; 
     text-align: left;
     color: #001b44;
   }
   
   .home-title h1 {
-    font-size: 3rem; /* Matches large heading */
+    font-size: 5rem; 
     font-weight: 700;
     color: #001b44;
     margin: 0;
