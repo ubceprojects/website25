@@ -9,7 +9,7 @@
     width: 80vw;
     height: 23vw;
     border-radius: 20px;
-    background: url("about-heading.png?url") no-repeat center;
+    background: url("../about-heading.png") no-repeat center;
     background-position: 50% 45%;
     background-size: cover;
     margin: auto;
@@ -79,7 +79,7 @@
     height: 40vw;
     margin: auto;
     margin-top: -10vw;
-    background: url("journey-path.svg?url") no-repeat center;
+    background: url("../journey-path.svg") no-repeat center;
     background-size: 70%;
 }
 
@@ -219,7 +219,7 @@
 .award-right {
     width: 55%;
     height: 50vw;
-    background: url("trophy.png?url") no-repeat center;
+    background: url("../trophy.png") no-repeat center;
     background-size: contain;
 }
 
