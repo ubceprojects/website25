@@ -2,9 +2,14 @@ import "./style.css";
 import MenuBar from "../../components/MenuBar";
 import ProfileCard from "../../components/ProfileCard";
 import teamData from "../../data/teamData.js";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const MeetTheTeam = () => {
+    const [searchTerm, setSearchTerm] = useState("");
+    const [roleFilter, setRoleFilter] = useState("");
+    const [teamFilter, setTeamFilter] = useState("");
+    const [filteredTeam, setFilteredTeam] = useState(teamData);
+
     useEffect(() => {
         // Role filter options
         const roleFilter = document.querySelector('.role-filter');
@@ -29,7 +34,7 @@ const MeetTheTeam = () => {
         teamFilter.innerHTML = '<option value="">Filter by Team</option>';
         
         const teamOptions = [
-            "Vice President", 
+            "President", 
             "Technology",
             "Operations",
             "Marketing",
@@ -45,6 +50,46 @@ const MeetTheTeam = () => {
         });
     }, []);
 
+    // Filter team data based on search term and filters
+    useEffect(() => {
+        let filtered = teamData;
+
+        // Filter by search term
+        if (searchTerm) {
+            filtered = filtered.filter(member =>
+                member.name.toLowerCase().includes(searchTerm.toLowerCase())
+            );
+        }
+
+        // Filter by type (Current/Alumni)
+        if (roleFilter) {
+            filtered = filtered.filter(member =>
+                member.type.toLowerCase().includes(roleFilter.toLowerCase())
+            );
+        }
+
+        // Filter by team (using role as team)
+        if (teamFilter) {
+            filtered = filtered.filter(member =>
+                member.role.toLowerCase().includes(teamFilter.toLowerCase())
+            );
+        }
+
+        setFilteredTeam(filtered);
+    }, [searchTerm, roleFilter, teamFilter]);
+
+    const handleSearchChange = (e) => {
+        setSearchTerm(e.target.value);
+    };
+
+    const handleRoleFilterChange = (e) => {
+        setRoleFilter(e.target.value);
+    };
+
+    const handleTeamFilterChange = (e) => {
+        setTeamFilter(e.target.value);
+    };
+
     return (
         <div className="meet-container">
             <MenuBar />
@@ -57,24 +102,37 @@ const MeetTheTeam = () => {
                             type="text" 
                             placeholder="Search for Members" 
                             className="search-input"
+                            value={searchTerm}
+                            onChange={handleSearchChange}
                         />
-                        <select className="filter-select role-filter">
+                        <select 
+                            className="filter-select role-filter"
+                            value={roleFilter}
+                            onChange={handleRoleFilterChange}
+                        >
                             <option value="">Filter by Type</option>
                         </select>
-                        <select className="filter-select team-filter">
+                        <select 
+                            className="filter-select team-filter"
+                            value={teamFilter}
+                            onChange={handleTeamFilterChange}
+                        >
                             <option value="">Filter by Team</option>
                         </select>
                     </div>
                 </div>
             </div>
             <div className="team-profiles">
-                {teamData.map((member, index) => (
+                {filteredTeam.map((member, index) => (
                     <ProfileCard 
                         key={index}
                         name={member.name}
                         role={member.role}
                         desc={member.desc}
                         img={member.img}
+                        linkedin={member.linkedin}
+                        instagram={member.instagram}
+                        email={member.email}
                     />
                 ))}
             </div>
