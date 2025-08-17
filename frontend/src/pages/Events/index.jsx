@@ -43,7 +43,7 @@ const Events = () => {
                     <h2>Upcoming Events</h2>
                 </div>
 
-                {/* Timeline elements */}
+
                 <div className="timeline-line"></div>
 
                 <div className="events-list">
@@ -59,6 +59,9 @@ const Events = () => {
             
             <div className="sponsor-photo">
             <img src={Image} alt="My pic"style={{ width: "100%", height: "auto" }} />
+            <button className="sponsor-button">
+            Become a Member →
+            </button>
             </div>
            
         </div>
