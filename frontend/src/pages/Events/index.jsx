@@ -2,6 +2,7 @@ import "./style.css";
 import MenuBar from "../../components/MenuBar";
 import EventItem from "../../components/Event";
 import { useRef, useState, useEffect } from "react";
+import Image from "/Events & Sponsorships.png"
 
 const Events = () => {
     const [activeIndex, setActiveIndex] = useState(0);
@@ -55,17 +56,11 @@ const Events = () => {
                 </div>
             </div>
 
-            <div className="events-bottom-curve"></div>
-
-            <div className="events-sponsors-section">
-                <h2>Our Sponsors</h2>
-                <p>Thank you to our sponsors for supporting UBC eProjects' mission and goals!</p>
-                <div className="events-sponsors-logos">
-                    <div className="sponsor-logo">versionone</div>
-                    <div className="sponsor-logo">MOTIONGREY</div>
-                </div>
-                <button className="events-sponsor-button">Become a Sponsor →</button>
+            
+            <div className="sponsor-photo">
+            <img src={Image} alt="My pic"style={{ width: "100%", height: "auto" }} />
             </div>
+           
         </div>
     );
 };

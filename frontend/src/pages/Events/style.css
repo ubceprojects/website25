@@ -42,73 +42,6 @@
     z-index: 5;
 }
 
-.events-sponsors-section {
-    background-color: #ffffff;
-    text-align: center;
-    padding: 5vh 2vw;
-    position: relative;
-    z-index: 10;
-}
-
-.events-sponsors-section h2 {
-    font-size: 3vw;
-    font-weight: 700;
-    color: #001b44;
-    margin: 1vh 0;
-    font-family: var(--font-primary);
-}
-
-.events-sponsors-section p {
-    font-size: 1.25vw;
-    color: #001b44;
-    margin-bottom: 5vh;
-    font-family: var(--font-primary);
-}
-
-.events-sponsors-logos {
-    display: flex;
-    justify-content: center;
-    gap: 4vw;
-    flex-wrap: wrap;
-    margin-bottom: 5vh;
-}
-
-.sponsor-logo {
-    width: 20vw;
-    height: 20vw;
-    max-width: 200px;
-    max-height: 200px;
-    border-radius: 50%;
-    background-color: #eee; /* Replace with your sponsor image */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-    font-size: 1.2vw;
-    color: #001b44;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-}
-
-.events-sponsor-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #001b44;
-    color: #ffffff;
-    font-size: 1rem;
-    font-weight: 500;
-    border: none;
-    border-radius: 6px;
-    padding: 0.75rem 1.5rem;
-    text-decoration: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    font-family: var(--font-primary);
-}
-
-.events-sponsor-button:hover {
-    background-color: #003366;
-}
 
 .events-list {
     position: relative;
@@ -171,4 +104,10 @@
 
 .event-wrapper.active .event-item {
     transform: scale(1.02);
+}
+
+.sponsor-photo {
+    margin-top: -100;
+    padding: 0;
+    box-sizing: border-box;
 }
