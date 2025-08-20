@@ -1,46 +1,55 @@
 .home-container {
     width: 100vw;
-    height: 100vh;
+    height: 80vh;
     display: flex;
-    flex-direction: column;
-    padding-top: 10vh; /* Adjusts vertical spacing */
-    box-sizing: border-box;
-    overflow-x: hidden;
-    overflow-y: auto;
-  }
-  
-  .text-container {
-    width: 90%;
-    max-width: 600px;
-    margin-left: 15vw; 
-    margin-top: 30vh; 
+    padding-top: 15vh; /* Adjusts vertical spacing */
+    overflow: hidden;
+}
+
+.text-container {
+    width: 30vw;
+    padding-left: 10vw;
+    margin-top: 30vh;
     text-align: left;
-    color: #001b44;
-  }
-  
-  .home-title h1 {
-    font-size: 5rem; 
+    color: var(--custom-darkblue);
+}
+
+.home-illus {
+    width: 70vw;
+    height: 90vh;
+    padding-right: 15vw;
+    padding-top: 7vw;
+}
+
+.illus-class {
+    transform: scale(1.8);
+}
+
+.home-title h1 {
+    font-size: 6vw;
+    width: 50vw;
     font-weight: 700;
-    color: #001b44;
+    color: var(--custom-darkblue);
     margin: 0;
     font-family: var(--font-primary);
-  }
-  
-  .home-subtitle p {
+}
+
+.home-subtitle p {
     font-size: 1.25rem;
+    width: 39vw;
     font-weight: 400;
     margin-top: 1rem;
     margin-bottom: 2rem;
     line-height: 1.4;
-    color: #001b44;
+    color: var(--custom-darkblue);
     font-family: var(--font-secondary);
-  }
-  
-  .home-button {
+}
+
+.home-button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background-color: #001b44;
+    background-color: var(--custom-darkblue);
     color: #ffffff;
     font-size: 1rem;
     font-weight: 500;
@@ -49,10 +58,12 @@
     padding: 0.75rem 1.5rem;
     text-decoration: none;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
     font-family: var(--font-secondary);
-  }
-  
-  .home-button:hover {
+}
+
+.home-button:hover {
     background-color: #003366;
-  }
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
