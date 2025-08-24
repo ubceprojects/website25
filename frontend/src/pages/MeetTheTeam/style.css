@@ -92,16 +92,16 @@
     flex-wrap: wrap;
     gap: 3vw;
     justify-content: center;
+    align-items: flex-start;
     max-width: 90vw;
     margin: 0 auto;
     min-height: 50vh;
 }
 
 .team-profiles .card {
-    flex: 0 0 calc(33.333% - 2vw) !important;
-    width: calc(33.333% - 2vw) !important;
+    flex: 0 0 auto !important;
+    width: 18vw !important;
     min-width: 15vw;
     max-width: 18vw;
-    height: auto !important;
-    min-height: 35vh;
+    height: 35vh !important;
 }
