@@ -34,12 +34,13 @@ const MeetTheTeam = () => {
         teamFilter.innerHTML = '<option value="">Filter by Team</option>';
         
         const teamOptions = [
-            "President", 
+            "Presidential", 
+            "Finance",
             "Technology",
             "Operations",
             "Marketing",
             "Corporate Relations",
-            "First Year Representative"
+            "Internal"
         ];
         
         teamOptions.forEach(team => {
@@ -68,11 +69,43 @@ const MeetTheTeam = () => {
             );
         }
 
-        // Filter by team (using role as team)
+        // Filter by team based on role
         if (teamFilter) {
-            filtered = filtered.filter(member =>
-                member.role.toLowerCase().includes(teamFilter.toLowerCase())
-            );
+            filtered = filtered.filter(member => {
+                const role = member.role.toLowerCase();
+                const team = teamFilter.toLowerCase();
+                
+                // Presidential team
+                if (team === 'presidential') {
+                    return role.includes('president') || role.includes('vice president');
+                }
+                // Finance team
+                else if (team === 'finance') {
+                    return role.includes('finance') || role.includes('vp finance');
+                }
+                // Technology team
+                else if (team === 'technology') {
+                    return role.includes('technology') || role.includes('tech');
+                }
+                // Operations team
+                else if (team === 'operations') {
+                    return role.includes('operations');
+                }
+                // Marketing team
+                else if (team === 'marketing') {
+                    return role.includes('marketing') || role.includes('design') || role.includes('visual media');
+                }
+                // Corporate Relations team
+                else if (team === 'corporate-relations') {
+                    return role.includes('corporate relations');
+                }
+                // Internal team
+                else if (team === 'internal') {
+                    return role.includes('internal');
+                }
+                
+                return false;
+            });
         }
 
         setFilteredTeam(filtered);
