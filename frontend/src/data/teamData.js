@@ -17,6 +17,7 @@ import kianImg from '/Kian-Chua.JPG';
 import miguelImg from '/Miguel-Pascual.jpeg';
 import minhalImg from '/Minhal-Hasnain.jpg';
 import nathanImg from '/Nathan-Law.jpg';
+import parishaImg from '/Parisha-Sehrawat.jpeg';
 import sarafImg from '/Saraf-Saiyara.jpeg';
 import serifImg from '/Serif-Sav.jpeg';
 import tiffanyImg from '/Tiffany-Hersa.jpeg';
@@ -247,7 +248,7 @@ const teamData = [
     role: "Technology Coordinator",
     type: "Current",
     desc: "Chasing Wonder",
-    img: null,
+    img: parishaImg,
     linkedin: "https://www.linkedin.com/in/parishasehrawat/",
     instagram: "https://www.instagram.com/parisha.sehrawat",
     email: "sehrawatparisha@gmail.com",
