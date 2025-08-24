@@ -129,7 +129,7 @@ const MeetTheTeam = () => {
             <div className="meet-heading">
                 <div className="heading-content">
                     <h1>The Minds Behind eProjects</h1>
-                    <h2>Meet the 2024/2024 Presidents, the Vice-Presidents, the VP of Finance, the Internal Director, the Operations team, the Marketing team, the Corporate Relations team, and the First Year Representatives that make UBC eProjects come alive!</h2>
+                    <h2>Meet the 2025/2026 Presidents, the Vice-Presidents, the VP of Finance, the Internal Director, the Operations team, the Marketing team, the Corporate Relations team, and the First Year Representatives that make UBC eProjects come alive!</h2>
                     <div className="search-buttons">
                         <input 
                             type="text" 
