@@ -10,6 +10,7 @@ import dakshImg from '/Daksh-Mathur.jpg';
 import dalaImg from '/Dala-Malaya-Sosa.jpeg';
 import elenyImg from '/Eleny-Xia.jpeg';
 import ericImg from '/Eric-Yan.jpeg';
+import eumiImg from '/Eumi-Finlayson.JPG';
 import fionaImg from '/Fiona-Gandhi.jpeg';
 import jeremyImg from '/Jeremy-Lloyd.jpg';
 import jonathanImg from '/Jonathan-Li.png';
@@ -160,7 +161,7 @@ const teamData = [
     role: "Visual Media Coordinator",
     type: "Current",
     desc: "I'm a curious mind with too many Google Docs open, and can make chaos look kind of coordinated",
-    img: null,
+    img: eumiImg,
     linkedin: null,
     instagram: "https://www.instagram.com/eumi_f",
     email: "eumi.finlayson@gmail.com",
