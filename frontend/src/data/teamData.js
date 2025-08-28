@@ -21,6 +21,8 @@ import parishaImg from '/Parisha-Sehrawat.jpeg';
 import sarafImg from '/Saraf-Saiyara.jpeg';
 import serifImg from '/Serif-Sav.jpeg';
 import tiffanyImg from '/Tiffany-Hersa.jpeg';
+import zachImg from '/Zachary-Chin.jpg';
+import arlienImg from '/Arielle-Soukantima.JPG';
 
 const teamData = [
   {
@@ -58,7 +60,7 @@ const teamData = [
     role: "Corporate Relations Coordinator",
     type: "Current",
     desc: "Please ask me about my Notion setup.",
-    img: null,
+    img: arlienImg,
     linkedin: "https://www.linkedin.com/in/ariellesktm/",
     instagram: null,
     email: "ariellesktm@gmail.com",
@@ -309,19 +311,19 @@ const teamData = [
     type: "Current",
     desc: "...",
     img: null,
-    linkedin: "null",
-    instagram: "null",
-    email: "null",
+    linkedin: null,
+    instagram: null,
+    email: null,
   },
   {
     name: "Zachary Chin",
     role: "Internal Coordinator",
     type: "Current",
-    desc: "...",
-    img: null,
-    linkedin: null,
+    desc: "If you Golf let me know!",
+    img: zachImg,
+    linkedin: "https://www.linkedin.com/in/zachary-chin-zi-yong/",
     instagram: null,
-    email: null,
+    email: "zachchin3003@gmail.com",
   },
 ];
 
