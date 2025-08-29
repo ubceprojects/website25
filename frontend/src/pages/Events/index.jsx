@@ -51,7 +51,7 @@ const Events = () => {
 
             <div className="sponsor-photo">
                 <img src={Image} alt="My pic" style={{ width: "100%", height: "auto" }} />
-                <button className="sponsor-button">Become a Member →</button>
+                <button className="sponsor-button">Become a Sponsor →</button>
             </div>
         </div>
     );
