@@ -24,6 +24,7 @@ import serifImg from '/Serif-Sav.jpeg';
 import tiffanyImg from '/Tiffany-Hersa.jpeg';
 import zachImg from '/Zachary-Chin.jpg';
 import arlienImg from '/Arielle-Soukantima.JPG';
+import vaibhavImg from '/Vaibhav-Sharma.jpeg';
 
 const teamData = [
   {
@@ -310,11 +311,11 @@ const teamData = [
     name: "Vaibhav Sharma",
     role: "Technology Director",
     type: "Current",
-    desc: "...",
-    img: null,
-    linkedin: null,
-    instagram: null,
-    email: null,
+    desc: "Everything that kills me makes me feel alive.",
+    img: vaibhavImg,
+    linkedin: "https://www.linkedin.com/in/v-sharma03/",
+    instagram: "https://www.instagram.com/_.chintuuu._/",
+    email: "vs301vs@gmail.com",
   },
   {
     name: "Zachary Chin",

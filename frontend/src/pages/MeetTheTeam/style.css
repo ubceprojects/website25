@@ -1,7 +1,7 @@
 .meet-container {
     width: 100vw;
-    min-height: 100vh;
-    overflow-y: auto;
+    height: 100vh;
+    overflow-y: scroll;
     overflow-x: hidden;
     padding-top: 0;
     margin-top: 0;
@@ -11,7 +11,7 @@
 .meet-heading {
     width: 100vw;
     height: 50vw;
-    background: linear-gradient(to right, #012241 0%, #0C88BF 76%);
+    background: linear-gradient(to right, #012241 0%, #0c88bf 76%);
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -70,7 +70,7 @@
 }
 
 .filter-select {
-    padding: 0.8vw 1.2vw;
+    padding: 0.8vw 1.5vw;
     font-size: 1.2vw;
     border-radius: 0.5vw;
     background-color: rgb(255, 255, 255);
@@ -79,6 +79,19 @@
     cursor: pointer;
     height: 3.5vw;
     box-sizing: border-box;
+    appearance: none;
+    position: relative;
+}
+
+.filter-select::after {
+    content: "▼"; /* you can use SVG, Unicode, or custom font icon */
+    font-size: 14px;
+    color: #333;
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none; /* lets clicks pass through */
 }
 
 .filter-select option {

@@ -8,6 +8,11 @@ body {
     overflow-x: hidden;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 :root {
     --font-primary: "League Spartan", sans-serif;
     --font-secondary: "Poppins", sans-serif;

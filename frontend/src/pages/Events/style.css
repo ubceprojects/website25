@@ -42,7 +42,6 @@
     z-index: 5;
 }
 
-
 .events-list {
     position: relative;
     padding-left: 10vw;
@@ -55,7 +54,6 @@
     top: 24vw;
     width: 0.2vw;
     border-radius: 50px;
-    height: 200vh;
     background: white;
     z-index: 1;
 }
@@ -107,7 +105,7 @@
 }
 
 .sponsor-photo {
-    position: relative; 
+    position: relative;
     padding: 0;
     box-sizing: border-box;
 }
@@ -116,17 +114,17 @@
     width: 100%;
     height: auto;
     display: block;
-  }
+}
 
 .sponsor-button {
-    position: absolute;       
-    bottom: 185px;            
-    left: 50%;               
+    position: absolute;
+    bottom: 185px;
+    left: 50%;
     transform: translateX(-50%);
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background-color: #05527B;
+    background-color: #05527b;
     color: #ffffff;
     font-size: 1rem;
     font-weight: 500;
@@ -137,8 +135,8 @@
     cursor: pointer;
     transition: background-color 0.3s ease;
     font-family: var(--font-secondary);
-  }
-  
-  .sponsor-button:hover {
+}
+
+.sponsor-button:hover {
     background-color: #003366;
-  }
+}
