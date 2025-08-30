@@ -120,6 +120,7 @@ const MeetTheTeam = () => {
                     </h2>
                     <div className="search-buttons">
                         <input type="text" placeholder="Search for Members" className="search-input" name="search" value={searchTerm} onChange={handleSearchChange} />
+                        <i className="fa-solid fa-magnifying-glass search-icon"></i>
                         <select className="filter-select role-filter" value={roleFilter} name="role" onChange={handleRoleFilterChange}>
                             <option value="">Filter by Type</option>
                         </select>

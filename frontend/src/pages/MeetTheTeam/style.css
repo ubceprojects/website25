@@ -52,6 +52,7 @@
     justify-content: center;
     width: 100%;
     margin-left: 5vw;
+    position: relative;
 }
 
 .search-input {
@@ -111,10 +112,79 @@
     min-height: 50vh;
 }
 
-.team-profiles .card {
+/* .team-profiles .card {
     flex: 0 0 auto !important;
     width: 18vw !important;
     min-width: 15vw;
     max-width: 18vw;
     height: 35vh !important;
+} */
+
+/* 📱 Mobile Styles */
+@media (max-width: 768px) {
+    .meet-heading {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 10vw 5vw;
+        height: auto;
+        text-align: left;
+        margin-top: 20vw;
+    }
+
+    .heading-content {
+        gap: 4vw;
+        width: 100%;
+    }
+
+    .meet-heading h1 {
+        font-size: 7vw;
+        text-align: left;
+    }
+
+    .meet-heading h2 {
+        font-size: 4.5vw;
+        line-height: 1.5;
+        max-width: 90vw;
+        margin-top: 4vw;
+        text-align: left;
+    }
+
+    .search-buttons {
+        flex-direction: column;
+        gap: 4vw;
+        margin-top: 6vw;
+        margin-left: 0;
+        width: 90vw;
+        align-items: stretch;
+    }
+
+    .search-icon {
+        position: absolute;
+        z-index: 5;
+        top: 3vw;
+        left: 2vw;
+    }
+
+    .search-input,
+    .filter-select {
+        width: 100%;
+        font-size: 4vw;
+        height: auto;
+        padding: 3vw;
+        border-radius: 2vw;
+        border: none;
+    }
+
+    .search-input {
+        padding-left: 8vw;
+    }
+
+    .team-profiles {
+        flex-direction: column;
+        align-items: center;
+        gap: 6vw;
+        padding: 5vw 0;
+        max-width: 100%;
+    }
 }

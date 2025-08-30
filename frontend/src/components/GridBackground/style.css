@@ -37,3 +37,21 @@
     mask-repeat: no-repeat;
     mask-size: cover;
 }
+
+@media screen and (max-width: 768px) {
+    .grid-bg-container {
+        width: 100vw;
+        height: 50vh;
+        left: 0;
+        top: 44vh;
+    }
+
+    .grid-pattern {
+        background-size: 78px 78px;
+    }
+
+    .grid-fade {
+        -webkit-mask-image: radial-gradient(ellipse at center, transparent 15%, black);
+        mask-image: radial-gradient(ellipse at center, transparent 15%, black);
+    }
+}
