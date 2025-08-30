@@ -64,10 +64,18 @@
     padding: 0.8vw 1.2vw;
     height: 3.5vw;
     box-sizing: border-box;
+    padding-left: 2.5vw;
 }
 
 .search-input::placeholder {
     color: rgb(0, 0, 0);
+}
+
+.search-icon {
+    position: absolute;
+    z-index: 5;
+    top: 1.2vw;
+    left: 12vw;
 }
 
 .filter-select {
@@ -111,14 +119,6 @@
     margin: 0 auto;
     min-height: 50vh;
 }
-
-/* .team-profiles .card {
-    flex: 0 0 auto !important;
-    width: 18vw !important;
-    min-width: 15vw;
-    max-width: 18vw;
-    height: 35vh !important;
-} */
 
 /* 📱 Mobile Styles */
 @media (max-width: 768px) {
