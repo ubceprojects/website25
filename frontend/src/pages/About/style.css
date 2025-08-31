@@ -130,6 +130,10 @@
     position: absolute;
 }
 
+.mobile-number {
+    display: none;
+}
+
 .number-1 {
     right: -0.1vw;
     bottom: -2.5vw;
@@ -181,10 +185,10 @@
 .about-award-container {
     width: 80vw;
     margin: auto;
-    display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 5vw;
+    position: relative;
 }
 
 .award-left {
@@ -194,18 +198,18 @@
 }
 
 .award-heading h1 {
+    position: absolute;
+    top: 15vw;
     font-size: 3vw;
     color: var(--custom-darkblue);
     font-weight: bold;
     font-family: var(--font-primary);
-    margin-bottom: 0vw;
 }
 
 .award-content {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 1vw;
 }
 
 .award-content p {
@@ -214,6 +218,7 @@
     font-weight: normal;
     font-family: var(--font-secondary);
     letter-spacing: 1px;
+    margin-top: 7vw;
 }
 
 .award-right {
@@ -244,4 +249,222 @@
     color: var(--white);
     font-weight: bold;
     font-family: var(--font-primary);
+}
+
+/* Mobile (<=768px) */
+@media (max-width: 768px) {
+    .about-container {
+        padding-top: 30vw;
+    }
+
+    .about-heading {
+        width: 90vw;
+        height: 80vw;
+        border-radius: 15px;
+    }
+
+    .about-heading h1 {
+        font-size: 10vw;
+    }
+
+    .about-subheading {
+        width: 90vw;
+        margin-top: 4vw;
+    }
+
+    .about-subheading p {
+        font-size: 3.5vw;
+        line-height: 1.5;
+        text-align: left;
+    }
+
+    .about-journey-container {
+        width: 100vw;
+        height: auto;
+        margin: 0;
+        padding: 10vw 0;
+        border-radius: 0;
+    }
+
+    .about-journey-heading h2 {
+        font-size: 6vw;
+        text-align: center;
+        margin-bottom: 2vw;
+    }
+
+    .about-journey-path {
+        display: none; /* hide SVG path on mobile */
+    }
+
+    .about-journey-card {
+        position: relative;
+        width: 80vw;
+        margin: 3rem auto;
+        text-align: center;
+    }
+
+    .journey-1 {
+        top: 0;
+        left: 0;
+    }
+
+    .journey-2 {
+        top: 0;
+        left: 0;
+    }
+
+    .journey-3 {
+        top: 0;
+        left: 0;
+    }
+
+    .journey-number {
+        display: none;
+    }
+
+    .number-1 {
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+
+    .number-2 {
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+
+    .number-3 {
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+
+    .mobile-number {
+        display: block;
+    }
+
+    .about-journey-heading {
+        font-size: 20vw;
+    }
+
+    .journey-heading {
+        font-size: 7vw;
+        margin-top: 3vw;
+    }
+
+    .journey-content {
+        font-size: 3.5vw;
+        text-align: center;
+        width: 100%;
+        margin-top: 3vw;
+        margin-bottom: 5vw;
+    }
+
+    .about-goals-heading h1 {
+        font-size: 6vw;
+        text-align: center;
+    }
+
+    .about-goals-content {
+        flex-direction: column;
+        gap: 3rem;
+        margin-top: 6vw;
+    }
+
+    .about-award-container {
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .award-content p {
+        font-size: 3.5vw;
+    }
+
+    .award-right {
+        height: 80vw;
+        width: 100%;
+        margin-left: -5vw;
+    }
+
+    .about-gallery-container {
+        height: 100vh;
+        padding-bottom: 5vw;
+    }
+
+    .gallery-heading {
+        margin-left: 0;
+        justify-content: center;
+    }
+
+    .gallery-heading h1 {
+        font-size: 6vw;
+    }
+
+    .about-heading h1 {
+        font-size: 9vw;
+    }
+
+    .about-goals-container {
+        margin-top: 15vw;
+    }
+
+    .about-subheading p {
+        margin-top: 10vw;
+        font-size: 4vw;
+        width: 80vw;
+        text-align: center;
+        margin-bottom: 20vw;
+    }
+
+    .about-journey-heading {
+        width: 100vw;
+    }
+
+    .about-journey-heading h2 {
+        font-size: 10vw;
+        text-align: center;
+    }
+
+    .about-goals-heading {
+        width: 92vw;
+    }
+
+    .award-heading {
+        margin-top: 8vw;
+        margin-bottom: -10vw;
+        position: relative;
+        top: 0px;
+    }
+
+    .award-content {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-top: 10vw;
+    }
+
+    .award-left {
+        margin-top: 10vw;
+        width: 100vw;
+        margin-bottom: 20vw;
+    }
+
+    .award-left p {
+        margin-top: 0vw;
+        width: 80vw;
+        margin: auto;
+    }
+
+    .about-goals-heading h1,
+    .award-heading h1,
+    .gallery-heading h1 {
+        font-size: 9vw;
+    }
+
+    .award-heading h1 {
+        position: relative;
+        top: 0px;
+        margin-top: 20vw;
+    }
 }

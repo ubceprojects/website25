@@ -1,0 +1,57 @@
+/* Container */
+.grid-bg-container {
+    position: absolute;
+    display: flex;
+    height: 60vh;
+    width: 45vw;
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
+    left: 5vw;
+    top: 14.5vw;
+}
+
+/* Grid pattern */
+.grid-pattern {
+    position: absolute;
+    inset: 0;
+    background-size: 75px 75px;
+    background-position: center;
+    opacity: 0.4;
+    background-image: linear-gradient(to right, black 1px, transparent 1px), linear-gradient(to bottom, black 1px, transparent 1px);
+}
+
+/* Fade effect with radial mask */
+.grid-fade {
+    pointer-events: none;
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white; /* stays white */
+    -webkit-mask-image: radial-gradient(ellipse at center, transparent 10%, black);
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: cover;
+    mask-image: radial-gradient(ellipse at center, transparent 10%, black);
+    mask-repeat: no-repeat;
+    mask-size: cover;
+}
+
+@media screen and (max-width: 768px) {
+    .grid-bg-container {
+        width: 100vw;
+        height: 50vh;
+        left: 0;
+        top: 44vh;
+    }
+
+    .grid-pattern {
+        background-size: 78px 78px;
+    }
+
+    .grid-fade {
+        -webkit-mask-image: radial-gradient(ellipse at center, transparent 15%, black);
+        mask-image: radial-gradient(ellipse at center, transparent 15%, black);
+    }
+}

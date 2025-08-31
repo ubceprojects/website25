@@ -1,6 +1,6 @@
 .card {
     width: 20vw;
-    height: 3vw;
+    height: 35vh;
     border-radius: 2.4vw;
     background: #012241;
     color: #fff;
@@ -90,6 +90,7 @@
     z-index: 3;
 }
 
+/* MOBILE STYLE */
 .social-icons {
     display: flex;
     gap: 2.5vw;
@@ -130,12 +131,151 @@
     fill: #012241;
 }
 
+/* DESKTOP STYLE */
+.social-icons-desktop {
+    display: none;
+    gap: 1.7vw;
+    margin-top: 0.5vw;
+    justify-content: center;
+    z-index: 3;
+    opacity: 0;
+    transition: all 0.3s ease;
+    background: rgba(12, 34, 65, 0.9);
+    padding: 2vw 1.5vw;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    position: absolute;
+    bottom: -2vw;
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    min-width: 10vw;
+}
+
+.card:hover .social-icons-desktop {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+.social-link-desktop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+}
+
+.social-link-desktop:hover {
+    transform: scale(1.1);
+}
+
+.social-link-desktop svg {
+    width: 2.3vw;
+    height: 2.3vw;
+}
+
+/* White social icons for desktop */
+.social-link-desktop svg path {
+    stroke: #ffffff;
+}
+
+.social-link-desktop svg path[fill] {
+    fill: #ffffff;
+}
+
 .card {
     transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.2s;
 }
 
 .card:hover {
-    transform: translate(0.8vw, -0.8vw);
+    transform: translate(0.4vw, -0.4vw);
     box-shadow: 0 0.6vw 2.5vw rgba(1, 34, 65, 0.18), -0.8vw 0.4vw 0.4vw #00000040;
     z-index: 2;
+}
+
+/* RESPONSIVE DESIGN  */
+/* MOBILE STYLES: <768px */
+@media screen and (max-width: 768px) {
+    .card {
+        width: 80vw;
+        min-height: 30vh;
+        padding: 5vw 4vw;
+        border-radius: 5vw;
+        flex-direction: column;
+    }
+
+    .cardOverlaySquare {
+        height: 50%;
+        border-bottom-left-radius: 5vw;
+        border-bottom-right-radius: 5vw;
+        transform: translateY(0);
+    }
+
+    .profilePic {
+        width: 25vw;
+        height: 25vw;
+        margin-top: 2vw;
+        margin-bottom: 4vw;
+        border-width: 4px;
+    }
+
+    .profileImg {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+
+    .profileName {
+        margin-top: 10vw;
+        font-size: 6vw;
+        margin-bottom: 1vw;
+        color: #012241;
+    }
+
+    .profileRole {
+        font-size: 4vw;
+        margin-top: 0.5vw;
+        margin-bottom: 1vw;
+        color: #012241;
+    }
+
+    .profileDescription {
+        font-size: 3.5vw;
+        line-height: 1.4;
+        text-align: center;
+        margin-top: 1vw;
+        width: 100%;
+        color: #012241;
+    }
+
+    /* MOBILE SOCIAL ICONS */
+    .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 5vw;
+        margin-top: 3vw;
+    }
+
+    .social-link i {
+        font-size: 7vw; /* bigger icons for mobile */
+        color: var(--custom-darkblue);
+    }
+
+    .social-link:hover {
+        transform: scale(1.2);
+    }
+
+    /* Hide desktop hover overlay on mobile */
+    .social-icons-desktop {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    /* Desktop - hide colored icons, show desktop style */
+    .social-icons {
+        display: none;
+    }
+    .social-icons-desktop {
+        display: flex;
+    }
 }

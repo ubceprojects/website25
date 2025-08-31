@@ -42,3 +42,27 @@
     top: -2vw;
     left: -2vw;
 }
+
+@media (max-width: 768px) {
+    .goal-card {
+        width: 60vw;
+        height: 40vw;
+        padding: 5vw 6vw;
+    }
+
+    .goal-heading {
+        font-size: 5vw;
+    }
+
+    .goal-content {
+        font-size: 3vw;
+    }
+
+    .goal-number {
+        font-size: 6vw;
+        width: 15vw;
+        height: 15vw;
+        top: -6vw;
+        left: -8vw;
+    }
+}

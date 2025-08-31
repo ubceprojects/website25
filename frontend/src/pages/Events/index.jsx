@@ -2,7 +2,7 @@ import "./style.css";
 import MenuBar from "../../components/MenuBar";
 import EventItem from "../../components/Event";
 import { useRef, useState, useEffect } from "react";
-import Image from "/Events & Sponsorships.png"
+import Image from "/Events & Sponsorships.png";
 
 const Events = () => {
     const [activeIndex, setActiveIndex] = useState(0);
@@ -18,19 +18,8 @@ const Events = () => {
         },
         {
             image: "https://cdn.prod.website-files.com/5b3dd54182ecae4d1602962f/609e33e18c5000af6211f094_HR%20Hackathon%20-%20Section%202.jpg",
-            title: "Hackathon",
-            description: "A 24-hour hackathon to build innovative solutions with your team.",
-        },
-
-        {
-            image: "about-heading.png",
-            title: "Workshop",
-            description: "Learn new skills from industry experts.",
-        },
-        {
-            image: "https://cdn.prod.website-files.com/5b3dd54182ecae4d1602962f/609e33e18c5000af6211f094_HR%20Hackathon%20-%20Section%202.jpg",
-            title: "Networking Event",
-            description: "Connect with professionals in your field.",
+            title: "Coming Soon",
+            description: "",
         },
     ];
 
@@ -43,8 +32,12 @@ const Events = () => {
                     <h2>Upcoming Events</h2>
                 </div>
 
-
-                <div className="timeline-line"></div>
+                <div
+                    className="timeline-line"
+                    style={{
+                        height: `${(events.length - 1) * 58}vw`,
+                    }}
+                ></div>
 
                 <div className="events-list">
                     {events.map((event, index) => (
@@ -56,14 +49,10 @@ const Events = () => {
                 </div>
             </div>
 
-            
             <div className="sponsor-photo">
-            <img src={Image} alt="My pic"style={{ width: "100%", height: "auto" }} />
-            <button className="sponsor-button">
-            Become a Member →
-            </button>
+                <img src={Image} alt="My pic" style={{ width: "100%", height: "auto" }} />
+                <button className="sponsor-button">Become a Sponsor →</button>
             </div>
-           
         </div>
     );
 };

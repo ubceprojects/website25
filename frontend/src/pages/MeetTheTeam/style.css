@@ -1,7 +1,7 @@
 .meet-container {
     width: 100vw;
-    min-height: 100vh;
-    overflow-y: auto;
+    height: 100vh;
+    overflow-y: scroll;
     overflow-x: hidden;
     padding-top: 0;
     margin-top: 0;
@@ -10,8 +10,8 @@
 
 .meet-heading {
     width: 100vw;
-    height: 53vw;
-    background: linear-gradient(to right, #012241 0%, #0C88BF 76%);
+    height: 50vw;
+    background: linear-gradient(to right, #012241 0%, #0c88bf 76%);
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -52,6 +52,7 @@
     justify-content: center;
     width: 100%;
     margin-left: 5vw;
+    position: relative;
 }
 
 .search-input {
@@ -63,14 +64,22 @@
     padding: 0.8vw 1.2vw;
     height: 3.5vw;
     box-sizing: border-box;
+    padding-left: 2.5vw;
 }
 
 .search-input::placeholder {
     color: rgb(0, 0, 0);
 }
 
+.search-icon {
+    position: absolute;
+    z-index: 5;
+    top: 1.2vw;
+    left: 12vw;
+}
+
 .filter-select {
-    padding: 0.8vw 1.2vw;
+    padding: 0.8vw 1.5vw;
     font-size: 1.2vw;
     border-radius: 0.5vw;
     background-color: rgb(255, 255, 255);
@@ -79,6 +88,19 @@
     cursor: pointer;
     height: 3.5vw;
     box-sizing: border-box;
+    appearance: none;
+    position: relative;
+}
+
+.filter-select::after {
+    content: "▼"; /* you can use SVG, Unicode, or custom font icon */
+    font-size: 14px;
+    color: #333;
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none; /* lets clicks pass through */
 }
 
 .filter-select option {
@@ -92,16 +114,77 @@
     flex-wrap: wrap;
     gap: 3vw;
     justify-content: center;
+    align-items: flex-start;
     max-width: 90vw;
     margin: 0 auto;
     min-height: 50vh;
 }
 
-.team-profiles .card {
-    flex: 0 0 calc(33.333% - 2vw) !important;
-    width: calc(33.333% - 2vw) !important;
-    min-width: 15vw;
-    max-width: 18vw;
-    height: auto !important;
-    min-height: 35vh;
+/* 📱 Mobile Styles */
+@media (max-width: 768px) {
+    .meet-heading {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 10vw 5vw;
+        height: auto;
+        text-align: left;
+        margin-top: 20vw;
+    }
+
+    .heading-content {
+        gap: 4vw;
+        width: 100%;
+    }
+
+    .meet-heading h1 {
+        font-size: 7vw;
+        text-align: left;
+    }
+
+    .meet-heading h2 {
+        font-size: 4.5vw;
+        line-height: 1.5;
+        max-width: 90vw;
+        margin-top: 4vw;
+        text-align: left;
+    }
+
+    .search-buttons {
+        flex-direction: column;
+        gap: 4vw;
+        margin-top: 6vw;
+        margin-left: 0;
+        width: 90vw;
+        align-items: stretch;
+    }
+
+    .search-icon {
+        position: absolute;
+        z-index: 5;
+        top: 3vw;
+        left: 2vw;
+    }
+
+    .search-input,
+    .filter-select {
+        width: 100%;
+        font-size: 4vw;
+        height: auto;
+        padding: 3vw;
+        border-radius: 2vw;
+        border: none;
+    }
+
+    .search-input {
+        padding-left: 8vw;
+    }
+
+    .team-profiles {
+        flex-direction: column;
+        align-items: center;
+        gap: 6vw;
+        padding: 5vw 0;
+        max-width: 100%;
+    }
 }

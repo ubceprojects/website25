@@ -28,18 +28,21 @@ const About = () => {
                 <div className="about-journey-path"></div>
 
                 <div className="about-journey-card journey-1">
+                    <div className="journey-number number-1 mobile-number">1</div>
                     <div className="journey-heading">2015 Founded</div>
                     <div className="journey-content">some text that can go here blah blah blah blah blah</div>
                     <div className="journey-number number-1">1</div>
                 </div>
 
                 <div className="about-journey-card journey-2">
+                    <div className="journey-number number-2 mobile-number">2</div>
                     <div className="journey-heading">2015 Founded</div>
                     <div className="journey-content">some text that can go here blah blah blah blah blah</div>
                     <div className="journey-number number-2">2</div>
                 </div>
 
                 <div className="about-journey-card journey-3">
+                    <div className="journey-number number-3 mobile-number">3</div>
                     <div className="journey-heading">2015 Founded</div>
                     <div className="journey-content">some text that can go here blah blah blah blah blah</div>
                     <div className="journey-number number-3">3</div>
@@ -62,18 +65,18 @@ const About = () => {
             </div>
 
             <div className="about-award-container">
-                <div className="award-left">
-                    <div className="award-heading">
-                        <h1>Top Small Club</h1>
-                    </div>
-                    <div className="award-content">
+                <div className="award-heading">
+                    <h1>Top Small Club</h1>
+                </div>
+                <div className="award-content">
+                    <div className="award-left">
                         <p>
                             UBC eProjects won the Top Small Club award at blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
                             blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah .
                         </p>
                     </div>
+                    <div className="award-right"></div>
                 </div>
-                <div className="award-right"></div>
             </div>
 
             <div className="about-gallery-container">
