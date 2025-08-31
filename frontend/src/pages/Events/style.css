@@ -142,3 +142,256 @@
   .sponsor-button:hover {
     background-color: #003366;
   }
+
+/* Responsive Design - Tablet */
+@media screen and (max-width: 1024px) {
+    .events-upcoming-heading {
+        width: 80vw;
+        padding-top: 8vw;
+        margin-left: 8vw;
+    }
+
+    .events-upcoming-heading h2 {
+        font-size: 5vw;
+        margin-top: 3vw;
+    }
+
+    .events-list {
+        padding-left: 8vw;
+        padding-top: 4vw;
+    }
+
+    .timeline-line {
+        left: 6vw;
+        top: 20vw;
+    }
+
+    .timeline-circle {
+        left: -2.5vw;
+        width: 18px;
+        height: 18px;
+    }
+
+    .event-wrapper.active .timeline-circle {
+        width: 22px;
+        height: 22px;
+    }
+
+    .sponsor-button {
+        bottom: 150px;
+        font-size: 0.9rem;
+        padding: 0.6rem 1.2rem;
+    }
+}
+
+/* Responsive Design - Mobile Large */
+@media screen and (max-width: 768px) {
+    .events-container {
+        padding-top: 10vw;
+    }
+
+    .events-upcoming-container {
+        margin-top: -8vw;
+        padding-bottom: 8vw;
+    }
+
+    .events-upcoming-heading {
+        width: 85vw;
+        padding-top: 6vw;
+        margin-left: 5vw;
+    }
+
+    .events-upcoming-heading h2 {
+        font-size: 6vw;
+        margin-top: 2vw;
+    }
+
+    .events-list {
+        padding-left: 5vw;
+        padding-top: 3vw;
+    }
+
+    .timeline-line {
+        left: 4vw;
+        top: 18vw;
+        height: 150vh;
+    }
+
+    .timeline-circle {
+        left: -2vw;
+        width: 16px;
+        height: 16px;
+    }
+
+    .event-wrapper.active .timeline-circle {
+        width: 20px;
+        height: 20px;
+    }
+
+    .sponsor-button {
+        bottom: 120px;
+        font-size: 0.85rem;
+        padding: 0.5rem 1rem;
+    }
+}
+
+/* Responsive Design - Mobile Small */
+@media screen and (max-width: 480px) {
+    .events-container {
+        padding-top: 12vw;
+    }
+
+    .events-upcoming-container {
+        margin-top: -6vw;
+        padding-bottom: 10vw;
+    }
+
+    .events-upcoming-heading {
+        width: 90vw;
+        padding-top: 5vw;
+        margin-left: 3vw;
+    }
+
+    .events-upcoming-heading h2 {
+        font-size: 7vw;
+        margin-top: 1.5vw;
+    }
+
+    .events-list {
+        padding-left: 3vw;
+        padding-top: 2vw;
+    }
+
+    .timeline-line {
+        left: 2.5vw;
+        top: 16vw;
+        height: 120vh;
+    }
+
+    .timeline-circle {
+        left: -1.5vw;
+        width: 14px;
+        height: 14px;
+    }
+
+    .event-wrapper.active .timeline-circle {
+        width: 18px;
+        height: 18px;
+    }
+
+    .sponsor-button {
+        bottom: 100px;
+        font-size: 0.8rem;
+        padding: 0.4rem 0.8rem;
+    }
+}
+
+/* Landscape orientation adjustments for mobile */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    .events-upcoming-container {
+        margin-top: -5vw;
+        padding-bottom: 3vw;
+    }
+
+    .events-upcoming-heading {
+        padding-top: 3vw;
+    }
+
+    .events-upcoming-heading h2 {
+        margin-top: 1vw;
+    }
+
+    .events-list {
+        padding-top: 2vw;
+    }
+
+    .timeline-line {
+        height: 100vh;
+    }
+
+    .sponsor-button {
+        bottom: 80px;
+    }
+}
+
+/* Extra small mobile devices */
+@media screen and (max-width: 360px) {
+    .events-container {
+        padding-top: 15vw;
+    }
+
+    .events-upcoming-container {
+        margin-top: -4vw;
+        padding-bottom: 12vw;
+    }
+
+    .events-upcoming-heading {
+        width: 95vw;
+        padding-top: 4vw;
+        margin-left: 2vw;
+    }
+
+    .events-upcoming-heading h2 {
+        font-size: 8vw;
+        margin-top: 1vw;
+    }
+
+    .events-list {
+        padding-left: 2vw;
+        padding-top: 1.5vw;
+    }
+
+    .timeline-line {
+        left: 1.5vw;
+        top: 14vw;
+        height: 100vh;
+    }
+
+    .timeline-circle {
+        left: -1vw;
+        width: 12px;
+        height: 12px;
+    }
+
+    .event-wrapper.active .timeline-circle {
+        width: 16px;
+        height: 16px;
+    }
+
+    .sponsor-button {
+        bottom: 80px;
+        font-size: 0.75rem;
+        padding: 0.3rem 0.6rem;
+    }
+}
+
+/* Touch-friendly improvements for mobile */
+@media (hover: none) and (pointer: coarse) {
+    .sponsor-button {
+        min-height: 44px; /* Minimum touch target size */
+        min-width: 44px;
+    }
+
+    .event-wrapper {
+        cursor: pointer;
+    }
+
+    .timeline-circle {
+        cursor: pointer;
+    }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .timeline-line {
+        width: 0.1vw;
+    }
+
+    .timeline-circle {
+        border-width: 2px;
+    }
+
+    .event-wrapper.active .timeline-circle {
+        border-width: 2px;
+    }
+}
