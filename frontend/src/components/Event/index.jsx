@@ -13,20 +13,35 @@ const EventItem = ({ index, image, title, description, setActiveIndex }) => {
             // how close the item is to center
             const distance = Math.abs(itemCenter - screenCenter);
 
-            // small threshold so it's only "active" when near center
-            if (distance < rect.height / 2) {
-                console.log("active");
+            // For the first event (index 0), be more lenient with activation
+            // Also check if we're at the top of the page
+            const isAtTop = window.scrollY < 100;
+            const threshold = (index === 0 && isAtTop) ? rect.height * 1.5 : rect.height / 2;
+
+            if (distance < threshold) {
                 setActiveIndex(index);
             }
         };
 
-        window.addEventListener("scroll", handleScroll);
+        // Use throttled scroll for better performance
+        let ticking = false;
+        const throttledHandleScroll = () => {
+            if (!ticking) {
+                requestAnimationFrame(() => {
+                    handleScroll();
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        };
+
+        window.addEventListener("scroll", throttledHandleScroll);
         handleScroll(); // run on mount to check initial position
 
         return () => {
-            window.removeEventListener("scroll", handleScroll);
+            window.removeEventListener("scroll", throttledHandleScroll);
         };
-    }, []);
+    }, [index, setActiveIndex]);
 
     return (
         <div className="event-item" ref={itemRef}>

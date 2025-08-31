@@ -32,14 +32,8 @@ const Events = () => {
                     <h2>Upcoming Events</h2>
                 </div>
 
-                <div
-                    className="timeline-line"
-                    style={{
-                        height: `${(events.length - 1) * 58}vw`,
-                    }}
-                ></div>
-
                 <div className="events-list">
+                    <div className="timeline-line"></div>
                     {events.map((event, index) => (
                         <div key={index} className={`event-wrapper ${index === activeIndex ? "active" : ""}`}>
                             <div className="timeline-circle"></div>
