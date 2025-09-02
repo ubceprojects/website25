@@ -175,7 +175,7 @@ const Masonry = ({ items, ease = "power3.out", duration = 0.6, stagger = 0.05, a
             const overlay = element.querySelector(".color-overlay");
             if (overlay) {
                 gsap.to(overlay, {
-                    opacity: 0.3,
+                    opacity: 1,
                     duration: 0.3,
                 });
             }
@@ -227,12 +227,21 @@ const Masonry = ({ items, ease = "power3.out", duration = 0.6, stagger = 0.05, a
                                         left: 0,
                                         width: "100%",
                                         height: "100%",
-                                        background: "linear-gradient(45deg, rgba(255,0,150,0.5), rgba(0,150,255,0.5))",
+                                        background: "rgba(0, 0, 0, 0.4)",
                                         opacity: 0,
                                         pointerEvents: "none",
                                         borderRadius: "8px",
+                                        display: "flex",
+                                        justifyContent: "center",
+                                        alignItems: "center",
+                                        color: "white",
+                                        fontFamily: "var(--font-custom)",
+                                        fontSize: "1.3vw",
+                                        textTransform: "capitalize",
                                     }}
-                                />
+                                >
+                                    {item.title}
+                                </div>
                             )}
                         </div>
                     </div>

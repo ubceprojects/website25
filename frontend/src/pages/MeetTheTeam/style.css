@@ -55,6 +55,10 @@
     position: relative;
 }
 
+input {
+    border: none;
+}
+
 .search-input {
     font-size: 1.2vw;
     border-radius: 0.5vw;

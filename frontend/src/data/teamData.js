@@ -1,6 +1,6 @@
-import img1 from '/Alisa-Ustenko.jpg';
-import img2 from '/ebb33bbaaa50a9fba08252e8c3ed9727d1bc3cae.jpg';
-import img3 from '/0d756c3cc9da32972899a87c1b232d0f6e78a600.jpg';
+import alisaImg from '/Alisa-Ustenko.jpg';
+import shinjiniImg from '/ebb33bbaaa50a9fba08252e8c3ed9727d1bc3cae.jpg';
+import angelaImg from '/0d756c3cc9da32972899a87c1b232d0f6e78a600.jpg';
 import aidenImg from '/Aiden-Ng.jpg';
 import avaImg from '/Ava-Low.jpg';
 import benImg from '/Ben-Hoppe.jpg';
@@ -25,6 +25,24 @@ import tiffanyImg from '/Tiffany-Hersa.jpeg';
 import zachImg from '/Zachary-Chin.jpg';
 import arlienImg from '/Arielle-Soukantima.JPG';
 import vaibhavImg from '/Vaibhav-Sharma.jpeg';
+import chiragImg from '/Chirag-Mishra.png';
+
+const images = [
+  alisaImg, shinjiniImg, angelaImg, aidenImg, avaImg,
+  benImg, brittanyImg, cathyImg, dakshImg, dalaImg,
+  elenyImg, ericImg, eumiImg, fionaImg, jeremyImg,
+  jonathanImg, kianImg, miguelImg, minhalImg, nathanImg,
+  parishaImg, sarafImg, serifImg, tiffanyImg, zachImg,
+  arlienImg, vaibhavImg, chiragImg
+];
+
+export const preloadImages = () => {
+  images.forEach(src => {
+    const img = new Image();
+    img.src = src;
+  });
+};
+
 
 const teamData = [
   {
@@ -42,7 +60,7 @@ const teamData = [
     role: "Co-President",
     type: "Current",
     desc: "Writing my own plot twist",
-    img: img1,
+    img: alisaImg,
     linkedin: "https://www.linkedin.com/in/alisa-ustenko/",
     instagram: "https://www.instagram.com/alisaustenko",
     email: "alisaustenko.15@gmail.com",
@@ -52,7 +70,7 @@ const teamData = [
     role: "Technology Coordinator",
     type: "Current",
     desc: "Can't go a day without g-cal :)",
-    img: img3,
+    img: angelaImg,
     linkedin: "https://www.linkedin.com/in/angela-cheng-0062a5237/",
     instagram: "https://www.instagram.com/angela.chengg_",
     email: "angelacheng369@gmail.com",
@@ -112,10 +130,10 @@ const teamData = [
     role: "Internal Director",
     type: "Current",
     desc: "...",
-    img: null,
-    linkedin: null,
+    img: chiragImg,
+    linkedin: 'http://linkedin.com/in/chiragmishra07',
     instagram: null,
-    email: null,
+    email: 'mishra.chirag2879@gmail.com',
   },
   {
     name: "Daksh Mathur",
@@ -282,7 +300,7 @@ const teamData = [
     role: "Co-President",
     type: "Current",
     desc: "...",
-    img: img2,
+    img: shinjiniImg,
     linkedin: null,
     instagram: null,
     email: null,
