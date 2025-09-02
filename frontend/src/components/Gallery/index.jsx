@@ -1,5 +1,6 @@
 import Masonry from "../Masonry";
 import "./style.css";
+import { useEffect } from "react";
 
 const Gallery = () => {
     const items = [
