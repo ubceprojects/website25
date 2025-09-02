@@ -196,7 +196,8 @@
 @media screen and (max-width: 768px) {
     .card {
         width: 80vw;
-        min-height: 30vh;
+        min-height: 40vh;
+        height: fit-content;
         padding: 5vw 4vw;
         border-radius: 5vw;
         flex-direction: column;
