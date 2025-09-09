@@ -50,9 +50,9 @@
     gap: 2vw;
     margin-top: 8vw;
     justify-content: center;
-    width: 100%;
-    margin-left: 5vw;
+    width: 100vw;
     position: relative;
+    margin-left: -5vw;
 }
 
 input {
@@ -79,7 +79,7 @@ input {
     position: absolute;
     z-index: 5;
     top: 1.2vw;
-    left: 12vw;
+    left: 21.8vw;
 }
 
 .filter-select {

@@ -183,49 +183,37 @@
 }
 
 .about-award-container {
-    width: 80vw;
+    width: 100vw;
     margin: auto;
-    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     margin-top: 5vw;
     position: relative;
 }
 
-.award-left {
-    width: 45%;
+.award-heading {
+    width: 100vw;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
 }
 
 .award-heading h1 {
     position: absolute;
-    top: 15vw;
+    top: 2vw;
+    margin: auto;
     font-size: 3vw;
     color: var(--custom-darkblue);
     font-weight: bold;
     font-family: var(--font-primary);
 }
 
-.award-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.award-content p {
-    font-size: 1.25vw;
-    color: var(--custom-darkblue);
-    font-weight: normal;
-    font-family: var(--font-secondary);
-    letter-spacing: 1px;
-    margin-top: 7vw;
-}
-
 .award-right {
-    width: 55%;
+    width: 50vw;
     height: 50vw;
     background: url("../trophy.png") no-repeat center;
     background-size: contain;
+    margin-left: -5vw;
 }
 
 .about-gallery-container {

@@ -116,10 +116,7 @@ const MeetTheTeam = () => {
             <div className="meet-heading">
                 <div className="heading-content">
                     <h1>The Minds Behind eProjects</h1>
-                    <h2>
-                        Meet the 2025/2026 Presidents, the Vice-Presidents, the Finance team, the Internal team, the Operations team, the Marketing team, the Technology team, the Corporate Relations
-                        team, and the First Year Representatives that make UBC eProjects come alive!
-                    </h2>
+                    <h2>Meet the 2025/26 Team that makes UBC eProjects come alive!</h2>
                     <div className="search-buttons">
                         <input type="text" placeholder="Search for Members" className="search-input" name="search" value={searchTerm} onChange={handleSearchChange} />
                         <i className="fa-solid fa-magnifying-glass search-icon"></i>

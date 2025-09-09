@@ -68,15 +68,7 @@ const About = () => {
                 <div className="award-heading">
                     <h1>Top Small Club</h1>
                 </div>
-                <div className="award-content">
-                    <div className="award-left">
-                        <p>
-                            UBC eProjects won the Top Small Club award at blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                            blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah .
-                        </p>
-                    </div>
-                    <div className="award-right"></div>
-                </div>
+                <div className="award-right"></div>
             </div>
 
             <div className="about-gallery-container">

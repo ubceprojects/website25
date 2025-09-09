@@ -60,9 +60,9 @@ const MenuBar = ({ type = "" }) => {
                     Events & Sponsors
                 </div>
                 <div className="menu-socials menu-item">
-                    <i className="fa-brands fa-linkedin-in"></i>
-                    <i className="fa-brands fa-instagram"></i>
-                    <i className="fa-solid fa-envelope"></i>
+                    <i className="fa-brands fa-linkedin-in" onClick={() => window.open("https://www.linkedin.com/company/ubc-eprojects/", "_blank")}></i>
+                    <i className="fa-brands fa-instagram" onClick={() => window.open("https://www.instagram.com/eprojectsubc/", "_blank")}></i>
+                    <i className="fa-solid fa-envelope" onClick={() => window.open("mailto:helloeprojectsubc@gmail.com")}></i>
                 </div>
 
                 {/* Hamburger for Mobile */}
