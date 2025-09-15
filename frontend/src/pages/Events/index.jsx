@@ -2,9 +2,9 @@ import "./style.css";
 import MenuBar from "../../components/MenuBar";
 import EventItem from "../../components/Event";
 import { useRef, useState, useEffect } from "react";
-import Image from "/Events & Sponsorships.png";
 import ImageTeam from "/Justin-eProjects-Tech-Intra-Picks-20.jpg";
-
+import Image from "/Events & Sponsorships.svg";
+import Launch from "/Launch Party Post.png";
 const Events = () => {
     const [activeIndex, setActiveIndex] = useState(0);
     const containerRef = useRef(null);
@@ -13,7 +13,7 @@ const Events = () => {
     // Sample event data
     const events = [
         {
-            image: "about-heading.png",
+            image: Launch,
             title: "Launch Party",
             description: `3...2...1...It's time for takeoff 🚀 Join us at eProjects' first event of the year: LAUNCH PARTY!✨ Meet real-life entrepreneurs 🎯 Discover our mission + vision for the year
 
@@ -56,10 +56,21 @@ RSVP now by clicking the photo!`,
             </div>
 
             <div className="sponsor-photo">
-                <img src={Image} alt="My pic" style={{ width: "100%", height: "auto" }} />
-                <a href="https://forms.gle/WxBdWx9Uq8DCYziB9" target="_blank" rel="noopener noreferrer">
-                    <button className="sponsor-button">Become a Sponsor →</button>
-                </a>
+                <div className="sponsors-section">
+                    <img src={Image} alt="Events & Sponsorships" />
+                    {/* Text content */}
+                    <div className="sponsors-text">
+                        <h2>Our Sponsors</h2>
+                        <p>Thank you to our sponsors for supporting UBC eProjects' mission and goals!</p>
+                    </div>
+                    
+                    {/* Sponsor button */}
+                    <div className="sponsor-button-container">
+                        <a href="https://forms.gle/WxBdWx9Uq8DCYziB9" target="_blank" rel="noopener noreferrer">
+                            <button className="sponsor-button">Become a Sponsor →</button>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     );
