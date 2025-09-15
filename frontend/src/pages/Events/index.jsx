@@ -3,6 +3,7 @@ import MenuBar from "../../components/MenuBar";
 import EventItem from "../../components/Event";
 import { useRef, useState, useEffect } from "react";
 import Image from "/Events & Sponsorships.png";
+import ImageTeam from "/Justin-eProjects-Tech-Intra-Picks-20.jpg";
 
 const Events = () => {
     const [activeIndex, setActiveIndex] = useState(0);
@@ -14,12 +15,23 @@ const Events = () => {
         {
             image: "about-heading.png",
             title: "Launch Party",
-            description: "Join us to kick off the year! Meet new members, network, and enjoy food and games.",
+            description: `3...2...1...It's time for takeoff 🚀 Join us at eProjects' first event of the year: LAUNCH PARTY!✨ Meet real-life entrepreneurs 🎯 Discover our mission + vision for the year
+
+🍽️ Free food + awesome giveaways!
+
+🗓️ When: September 18, 2025 | 5:30pm to 8:30pm
+📍 Where: Abdul Ladha Science Centre
+👔 Dress code: Smart casual
+🏷️ Price: FREE
+
+RSVP now by clicking the photo!`,
+            link: "https://luma.com/pakkqm8p", // Replace with actual RSVP link
         },
         {
-            image: "https://cdn.prod.website-files.com/5b3dd54182ecae4d1602962f/609e33e18c5000af6211f094_HR%20Hackathon%20-%20Section%202.jpg",
+            image: ImageTeam,
             title: "Coming Soon",
             description: "",
+            link: null, // No link for coming soon events
         },
     ];
 
@@ -37,7 +49,7 @@ const Events = () => {
                     {events.map((event, index) => (
                         <div key={index} className={`event-wrapper ${index === activeIndex ? "active" : ""}`}>
                             <div className="timeline-circle"></div>
-                            <EventItem index={index} image={event.image} title={event.title} description={event.description} setActiveIndex={setActiveIndex} />
+                            <EventItem index={index} image={event.image} title={event.title} description={event.description} setActiveIndex={setActiveIndex} link={event.link} />
                         </div>
                     ))}
                 </div>
@@ -45,7 +57,9 @@ const Events = () => {
 
             <div className="sponsor-photo">
                 <img src={Image} alt="My pic" style={{ width: "100%", height: "auto" }} />
-                <button className="sponsor-button">Become a Sponsor →</button>
+                <a href="https://forms.gle/WxBdWx9Uq8DCYziB9" target="_blank" rel="noopener noreferrer">
+                    <button className="sponsor-button">Become a Sponsor →</button>
+                </a>
             </div>
         </div>
     );

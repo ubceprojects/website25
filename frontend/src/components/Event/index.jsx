@@ -1,7 +1,7 @@
 import "./style.css";
 import { useEffect, useRef } from "react";
 
-const EventItem = ({ index, image, title, description, setActiveIndex }) => {
+const EventItem = ({ index, image, title, description, setActiveIndex, link }) => {
     const itemRef = useRef(null);
 
     useEffect(() => {
@@ -46,7 +46,13 @@ const EventItem = ({ index, image, title, description, setActiveIndex }) => {
     return (
         <div className="event-item" ref={itemRef}>
             <div className="event-image-container">
-                <img src={image} alt={title} className="event-image" />
+                {link ? (
+                    <a href={link} target="_blank" rel="noopener noreferrer">
+                        <img src={image} alt={title} className="event-image" />
+                    </a>
+                ) : (
+                    <img src={image} alt={title} className="event-image" />
+                )}
             </div>
             <div className="event-content">
                 <h3 className="event-title">{title}</h3>
