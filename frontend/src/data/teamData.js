@@ -21,6 +21,7 @@ import nathanImg from '/Nathan-Law.jpg';
 import parishaImg from '/Parisha-Sehrawat.jpeg';
 import sarafImg from '/Saraf-Saiyara.jpeg';
 import serifImg from '/Serif-Sav.jpeg';
+import sophieImg from '/Sophie_Bhatia.jpg';
 import tiffanyImg from '/Tiffany-Hersa.jpeg';
 import zachImg from '/Zachary-Chin.jpg';
 import arlienImg from '/Arielle-Soukantima.JPG';
@@ -33,7 +34,7 @@ const images = [
   benImg, brittanyImg, cathyImg, dakshImg, dalaImg,
   elenyImg, ericImg, eumiImg, fionaImg, jeremyImg,
   jonathanImg, kianImg, miguelImg, minhalImg, nathanImg,
-  parishaImg, sarafImg, serifImg, tiffanyImg, zachImg,
+  parishaImg, sarafImg, serifImg, sophieImg, tiffanyImg, zachImg,
   arlienImg, vaibhavImg, chiragImg, joshImg
 ];
 
@@ -80,10 +81,10 @@ const teamData = [
     name: "Sophie Bhatia",
     role: "Vice President",
     type: "Current",
-    desc: "...",
-    img: null,
-    linkedin: null,
-    instagram: null,
+    desc: "if it makes you happy then it's not a waste of time :)",
+    img: sophieImg,
+    linkedin: "https://www.linkedin.com/in/sophia-bhatia",
+    instagram: "https://www.instagram.com/soph_b4/",
     email: null,
   },
   {
