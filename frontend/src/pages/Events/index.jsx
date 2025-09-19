@@ -55,21 +55,19 @@ RSVP now by clicking the photo!`,
                 </div>
             </div>
 
-            <div className="sponsor-photo">
-                <div className="sponsors-section">
-                    <img src={Image} alt="Events & Sponsorships" />
-                    {/* Text content */}
-                    <div className="sponsors-text">
-                        <h2>Our Sponsors</h2>
-                        <p>Thank you to our sponsors for supporting UBC eProjects' mission and goals!</p>
-                    </div>
-                    
-                    {/* Sponsor button */}
-                    <div className="sponsor-button-container">
-                        <a href="https://forms.gle/WxBdWx9Uq8DCYziB9" target="_blank" rel="noopener noreferrer">
-                            <button className="sponsor-button">Become a Sponsor →</button>
-                        </a>
-                    </div>
+            <div className="sponsors-section">
+                <img src={Image} alt="Events & Sponsorships" />
+                {/* Text content */}
+                <div className="sponsors-text">
+                    <h2>Our Sponsors</h2>
+                    <p>Thank you to our sponsors for supporting UBC eProjects' mission and goals!</p>
+                </div>
+
+                {/* Sponsor button */}
+                <div className="sponsor-button-container">
+                    <a href="https://forms.gle/WxBdWx9Uq8DCYziB9" target="_blank" rel="noopener noreferrer">
+                        <button className="sponsor-button">Become a Sponsor →</button>
+                    </a>
                 </div>
             </div>
         </div>

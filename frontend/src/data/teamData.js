@@ -21,6 +21,7 @@ import nathanImg from '/Nathan-Law.jpg';
 import parishaImg from '/Parisha-Sehrawat.jpeg';
 import sarafImg from '/Saraf-Saiyara.jpeg';
 import serifImg from '/Serif-Sav.jpeg';
+import sophieImg from '/Sophie_Bhatia.jpg';
 import tiffanyImg from '/Tiffany-Hersa.jpeg';
 import zachImg from '/Zachary-Chin.jpg';
 import arlienImg from '/Arielle-Soukantima.JPG';
@@ -33,7 +34,7 @@ const images = [
   benImg, brittanyImg, cathyImg, dakshImg, dalaImg,
   elenyImg, ericImg, eumiImg, fionaImg, jeremyImg,
   jonathanImg, kianImg, miguelImg, minhalImg, nathanImg,
-  parishaImg, sarafImg, serifImg, tiffanyImg, zachImg,
+  parishaImg, sarafImg, serifImg, sophieImg, tiffanyImg, zachImg,
   arlienImg, vaibhavImg, chiragImg, joshImg
 ];
 
@@ -60,11 +61,11 @@ const teamData = [
     name: "Shinjini Manchanda",
     role: "Co-President",
     type: "Current",
-    desc: "...",
+    desc: "Riding the E-Ship Wave",
     img: shinjiniImg,
     linkedin: null,
-    instagram: null,
-    email: null,
+    instagram: "https://www.instagram.com/shinjini.manchanda",
+    email: "shinjinimanchanda@gmail.com",
   },
   {
     name: "Dala Malaya Sosa",
@@ -72,7 +73,7 @@ const teamData = [
     type: "Current",
     desc: "aspire to inspire before you expire",
     img: dalaImg,
-    linkedin: "https://linkedin.com/in/dalasosa",
+    linkedin: "https://www.linkedin.com/in/dalasosa",
     instagram: null,
     email: "dalamalaya09@gmail.com",
   },
@@ -80,10 +81,10 @@ const teamData = [
     name: "Sophie Bhatia",
     role: "Vice President",
     type: "Current",
-    desc: "...",
-    img: null,
-    linkedin: null,
-    instagram: null,
+    desc: "if it makes you happy then it's not a waste of time :)",
+    img: sophieImg,
+    linkedin: "https://www.linkedin.com/in/sophia-bhatia",
+    instagram: "https://www.instagram.com/soph_b4/",
     email: null,
   },
   {
