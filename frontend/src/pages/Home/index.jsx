@@ -15,7 +15,8 @@ const Home = () => {
                 <div className="home-subtitle">
                     <p>Connecting aspiring entrepreneurs and start-up founders in Vancouver.</p>
                 </div>
-                <button className="home-button">Become a Member →</button>
+                <a className="home-button"
+                href = "https://www.bouncelife.com/events/68ca445c9f698c2d07cb283d" target="_blank" rel="noopener noreferrer">Become a Member →</a>
             </div>
 
             <div className="home-illus">
