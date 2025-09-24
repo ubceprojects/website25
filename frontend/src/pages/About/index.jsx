@@ -30,21 +30,21 @@ const About = () => {
                 <div className="about-journey-card journey-1">
                     <div className="journey-number number-1 mobile-number">1</div>
                     <div className="journey-heading">2015 Founded</div>
-                    <div className="journey-content">some text that can go here blah blah blah blah blah</div>
+                    <div className="journey-content">Twelve friends came together in a basement, brainstorming ways to connect young entrepreneurs.</div>
                     <div className="journey-number number-1">1</div>
                 </div>
 
                 <div className="about-journey-card journey-2">
                     <div className="journey-number number-2 mobile-number">2</div>
-                    <div className="journey-heading">2015 Founded</div>
-                    <div className="journey-content">some text that can go here blah blah blah blah blah</div>
+                    <div className="journey-heading">2017 First Recognition</div>
+                    <div className="journey-content">Awarded CUS Top Small Club, recognizing the impact and energy of our growing community.</div>
                     <div className="journey-number number-2">2</div>
                 </div>
 
                 <div className="about-journey-card journey-3">
                     <div className="journey-number number-3 mobile-number">3</div>
-                    <div className="journey-heading">2015 Founded</div>
-                    <div className="journey-content">some text that can go here blah blah blah blah blah</div>
+                    <div className="journey-heading">2025 Expanding </div>
+                    <div className="journey-content">With 150+ members and 5+ new events, we launched Pitchathon with Microsoft and proudly brought home the Top Small Club</div>
                     <div className="journey-number number-3">3</div>
                 </div>
             </div>
