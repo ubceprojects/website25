@@ -131,7 +131,7 @@
 /* Custom Sponsors Section Styles */
 .sponsors-section {
     background: #0772ac;
-    padding: 120px 20px;
+    padding: 140px 20px;
     position: relative;
     overflow: hidden;
     margin: 0;
@@ -140,6 +140,15 @@
     align-items: center;
     justify-content: center;
     min-height: 400px;
+}
+
+.sponsors-section img {
+    width: 110%;
+    height: auto;
+    object-fit: contain;
+    position: relative;
+    top: -4rem;
+    z-index: 1;
 }
 
 .sponsors-text {
@@ -236,8 +245,8 @@
     }
 
     .sponsors-section img {
-        width: 80%;
-        height: 80%;
+        width: 110%;
+        height: 100%;
         object-fit: cover;
         position: relative;
         top: 10%;

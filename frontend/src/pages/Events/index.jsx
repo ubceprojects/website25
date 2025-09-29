@@ -48,7 +48,7 @@ const Events = () => {
             </div>
 
             <div className="sponsors-section">
-                <img src={Image} alt="Events & Sponsorships" />
+                <img src={Image2} alt="Events & Sponsorships" />
                 {/* Text content */}
                 <div className="sponsors-text">
                     <h2>Our Sponsors</h2>
