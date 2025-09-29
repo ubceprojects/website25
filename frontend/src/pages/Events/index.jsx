@@ -4,6 +4,7 @@ import EventItem from "../../components/Event";
 import { useRef, useState, useEffect } from "react";
 import ImageTeam from "/Justin-eProjects-Tech-Intra-Picks-20.jpg";
 import Image from "/Events & Sponsorships.svg";
+import Image2 from "/Group 39.svg";
 import Launch from "/Launch Party Post.png";
 const Events = () => {
     const [activeIndex, setActiveIndex] = useState(0);
@@ -15,16 +16,7 @@ const Events = () => {
         {
             image: Launch,
             title: "Launch Party",
-            description: `3...2...1...It's time for takeoff 🚀 Join us at eProjects' first event of the year: LAUNCH PARTY!✨ Meet real-life entrepreneurs 🎯 Discover our mission + vision for the year
-
-🍽️ Free food + awesome giveaways!
-
-🗓️ When: September 18, 2025 | 5:30pm to 8:30pm
-📍 Where: Abdul Ladha Science Centre
-👔 Dress code: Smart casual
-🏷️ Price: FREE
-
-RSVP now by clicking the photo!`,
+            description: `The Launch Party is the official kick-off event for eProjects! This networking event is your chance to step into the world of innovation, creativity and leadership. Whether you’re a seasoned entrepreneur or just curious, this is a perfect opportunity to meet like-minded students, connect with future founders and industry leaders, and get an inside look at what the club has planned for the upcoming academic year.`,
             link: "https://luma.com/pakkqm8p", // Replace with actual RSVP link
         },
         {

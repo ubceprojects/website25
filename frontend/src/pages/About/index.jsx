@@ -64,12 +64,12 @@ const About = () => {
                 </div>
             </div>
 
-            <div className="about-award-container">
+            {/* <div className="about-award-container">
                 <div className="award-heading">
                     <h1>Top Small Club</h1>
                 </div>
                 <div className="award-right"></div>
-            </div>
+            </div> */}
 
             <div className="about-gallery-container">
                 <div className="gallery-heading">
