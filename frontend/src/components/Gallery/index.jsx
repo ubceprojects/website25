@@ -88,6 +88,30 @@ const Gallery = () => {
             height: 1100,
             title: "Tech Intrapreneur Event",
         },
+        {
+            id: "15",
+            img: "/gallery/15.avif",
+            height: 400,
+            title: "eProjects Launch Event",
+        },
+        {
+            id: "16",
+            img: "/gallery/16.avif",
+            height: 500,
+            title: "eProjects Launch Event",
+        },
+        {
+            id: "17",
+            img: "/gallery/17.avif",
+            height: 600,
+            title: "eProjects Launch Event",
+        },
+        {
+            id: "18",
+            img: "/gallery/18.avif",
+            height: 400,
+            title: "eProjects Social",
+        },
     ];
 
     useEffect(() => {
