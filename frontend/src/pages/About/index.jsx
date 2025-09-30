@@ -54,13 +54,13 @@ const About = () => {
                     <h1>Our Goals for 2025/26</h1>
                 </div>
                 <div className="about-goals-content">
-                    <GoalCard number={1} heading="Connection" content="Connecting students with entrepreneurs for relationship-building, industry insights, and firsthand experiences." />
+                    <GoalCard number={1} heading="Industry Immersion and Access" content="Foster stronger connections between students and entrepreneurs, offering firsthand industry insights and valuable relationships." />
                     <GoalCard
                         number={2}
-                        heading="Growth & Inclusivity"
-                        content="Exclusive first-year events offering personalized support to develop skills and showcase learning, fostering innovation and entrepreneurship. "
+                        heading="Scaling Signature Events"
+                        content="Expand our presence by maintaining flagship events and introducing large-scale programs to reach wider audiences and enhance networking. "
                     />
-                    <GoalCard number={3} heading="Collaboration" content="Collaborating with other clubs to highlight the relevance of entrepreneurship across all business fields." />
+                    <GoalCard number={3} heading="Interdisciplinary Collaboration" content="Forge stronger partnerships with various clubs and campus services to underscore entrepreneurship's universal relevance across all academic and business fields." />
                 </div>
             </div>
 
