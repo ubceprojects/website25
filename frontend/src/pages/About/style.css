@@ -377,7 +377,8 @@
     }
 
     .about-gallery-container {
-        height: 530vh;
+        height: auto;
+        min-height: 620vh;
         padding-bottom: 5vw;
     }
 
