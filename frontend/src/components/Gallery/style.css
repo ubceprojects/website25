@@ -1,4 +1,7 @@
 .gallery-photos {
     width: 85vw;
     margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
 }

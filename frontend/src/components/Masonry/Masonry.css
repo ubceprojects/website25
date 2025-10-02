@@ -1,3 +1,9 @@
+.masonry-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
 .list {
     position: relative;
     width: 100%;
@@ -7,7 +13,7 @@
 .item-wrapper {
     position: absolute;
     will-change: transform, width, height, opacity;
-    padding: 3vw;
+    padding: 1vw;
     cursor: pointer;
     top: 0;
     left: 0;

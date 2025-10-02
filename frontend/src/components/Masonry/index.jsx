@@ -92,17 +92,23 @@ const Masonry = ({ items, ease = "power3.out", duration = 0.6, stagger = 0.05, a
         if (!width) return [];
 
         const colHeights = new Array(columns).fill(0);
-        const columnWidth = width / columns; // 10px for margin
+        const columnWidth = width / columns;
+        const gap = 20; // Gap between items
+        const padding = 30; // Padding around items
+        
+        // Calculate total grid width to center it
+        const totalGridWidth = (columns * columnWidth) + ((columns - 1) * gap);
+        const startOffset = (width - totalGridWidth) / 2;
 
         return items.map((child) => {
             const col = colHeights.indexOf(Math.min(...colHeights));
-            const x = columnWidth * col;
+            const x = startOffset + (columnWidth * col) + (col * gap);
             const height = child.height / 2;
             const y = colHeights[col];
 
-            colHeights[col] += height;
+            colHeights[col] += height + gap;
 
-            return { ...child, x, y, w: columnWidth, h: height };
+            return { ...child, x, y, w: columnWidth - padding, h: height };
         });
     }, [columns, items, width]);
 
@@ -125,8 +131,8 @@ const Masonry = ({ items, ease = "power3.out", duration = 0.6, stagger = 0.05, a
                     const animationProps = {
                         x: item.x,
                         y: item.y,
-                        width: item.w - 20,
-                        height: item.h - 20,
+                        width: item.w,
+                        height: item.h,
                     };
 
                     gsap.fromTo(
