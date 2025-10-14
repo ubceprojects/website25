@@ -14,9 +14,7 @@ const About = () => {
 
             <div className="about-subheading">
                 <p>
-                    Tomorrow's business and community leaders are actively involved in a thriving atmosphere of growth and learning on our campus. eProjects is dedicated to supporting and encouraging
-                    students during this stage of development. We believe in fostering an environment that promotes collaboration, innovation, and personal growth among our students. We provide
-                    resources, mentorship, and opportunities that help students turn ideas into action. By connecting passion with purpose, we aim to inspire meaningful and lasting impact.
+                As one of UBC's top clubs, eProjects serves as a vital launchpad for emerging student entrepreneurs. We cultivate a dynamic community where aspiring innovators gain access to crucial resources, unparalleled opportunities, and a robust network of highly skilled and diverse industry leaders. Our goal is to empower these emerging talents to not only launch but truly thrive within Vancouver's vibrant startup landscape. This year, we're building on our proven track record with ambitious growth initiatives, expanding our reach and elevating our programs to deliver exceptional value for both our students and our partners.
                 </p>
             </div>
 
