@@ -1,11 +1,12 @@
 import "./style.css";
 import MenuBar from "../../components/MenuBar";
 import EventItem from "../../components/Event";
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState } from "react";
 import ImageTeam from "/Justin-eProjects-Tech-Intra-Picks-20.jpg";
-import Image from "/Events & Sponsorships.svg";
+
 import Image2 from "/Group 39.svg";
 import Launch from "/Launch Party Post.png";
+import Image3 from "/Sunny-EPROJ-Innovate-38.jpg";
 const Events = () => {
     const [activeIndex, setActiveIndex] = useState(0);
     const containerRef = useRef(null);
@@ -18,10 +19,16 @@ const Events = () => {
             title: "Launch Party",
             description: `The Launch Party is the official kick-off event for eProjects! This networking event is your chance to step into the world of innovation, creativity and leadership. Whether you’re a seasoned entrepreneur or just curious, this is a perfect opportunity to meet like-minded students, connect with future founders and industry leaders, and get an inside look at what the club has planned for the upcoming academic year.`,
             link: "https://luma.com/pakkqm8p", // Replace with actual RSVP link
+        }, 
+        {
+            image: Image3,
+            title: "Innovate",
+            description: `An evening that brings together student entrepreneurs, creators, and innovators to showcase ideas, connect with peers, and gain insights from industry professionals`,
+            link: "", // Replace with actual RSVP link
         },
         {
             image: ImageTeam,
-            title: "Coming Soon",
+            title: "Accelerate Coming Soon",
             description: "",
             link: null, // No link for coming soon events
         },
