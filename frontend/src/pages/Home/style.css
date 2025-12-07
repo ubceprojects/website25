@@ -17,12 +17,13 @@
 .home-illus {
     width: 70vw;
     height: 90vh;
-    padding-right: 15vw;
-    padding-top: 7vw;
+    padding-right: 5vw;
 }
 
 .illus-class {
-    transform: scale(1.8);
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .home-title h1 {
@@ -96,7 +97,9 @@
     }
 
     .illus-class {
-        transform: scale(3);
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
     }
 
     .home-title h1 {

@@ -1,11 +1,12 @@
 import "./style.css";
 import MenuBar from "../../components/MenuBar";
 import EventItem from "../../components/Event";
-import { useRef, useState, useEffect } from "react";
-import ImageTeam from "/Justin-eProjects-Tech-Intra-Picks-20.jpg";
-import Image from "/Events & Sponsorships.svg";
+import { useRef, useState } from "react";
+import ImageTeamAccelerate from "/Doris_eProjects_Accelerate_2025-46.jpg";
 import Image2 from "/Group 39.svg";
-import Launch from "/Launch Party Post.png";
+import Exec from "/Exec.png";
+import Launch from "/LaunchParty.jpg";
+import Image3 from "/Sunny-EPROJ-Innovate-38.jpg";
 const Events = () => {
     const [activeIndex, setActiveIndex] = useState(0);
     const containerRef = useRef(null);
@@ -17,12 +18,24 @@ const Events = () => {
             image: Launch,
             title: "Launch Party",
             description: `The Launch Party is the official kick-off event for eProjects! This networking event is your chance to step into the world of innovation, creativity and leadership. Whether you’re a seasoned entrepreneur or just curious, this is a perfect opportunity to meet like-minded students, connect with future founders and industry leaders, and get an inside look at what the club has planned for the upcoming academic year.`,
-            link: "https://luma.com/pakkqm8p", // Replace with actual RSVP link
+            link: "", // Replace with actual RSVP link
+        }, 
+        {
+            image: Image3,
+            title: "Innovate",
+            description: `An evening that brings together student entrepreneurs, creators, and innovators to showcase ideas, connect with peers, and gain insights from industry professionals`,
+            link: "", // Replace with actual RSVP link
         },
         {
-            image: ImageTeam,
-            title: "Coming Soon",
-            description: "",
+            image: ImageTeamAccelerate,
+            title: "Accelerate",
+            description: "ACCELERATE is your chance to explore the world of fast-paced Silicon Valley startups! Meet delegates from prestigious accelerator and incubator programs that can help you get your ideas off the ground 🚀🤩",
+            link: null, // No link for coming soon events
+        },
+        {
+            image: Exec,
+            title: "Executive Lounge Coming Soon..",
+            description: "Executive Lounge is your chance to network with entrepreneurs, CEOs, and high-ranking executives in a formal setting. Enjoy gourmet appetizers, live jazz music, and a sophisticated venue while discovering new opportunities for professional growth.",
             link: null, // No link for coming soon events
         },
     ];
