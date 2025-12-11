@@ -2,8 +2,23 @@ import "./style.css";
 import MenuBar from "../../components/MenuBar";
 import GoalCard from "../../components/GoalCard";
 import Gallery from "../../components/Gallery";
+import { useEffect } from "react";
 
 const About = () => {
+    useEffect(() => {
+        document.title = "About Us | UBC eProjects - Entrepreneurship Club";
+        // Update meta description
+        const metaDescription = document.querySelector('meta[name="description"]');
+        if (metaDescription) {
+            metaDescription.setAttribute('content', 'Learn about UBC eProjects, one of UBC\'s top entrepreneurship clubs. Discover our journey, goals, and how we support student entrepreneurs in Vancouver.');
+        }
+        // Update canonical URL
+        const canonical = document.querySelector('link[rel="canonical"]');
+        if (canonical) {
+            canonical.setAttribute('href', 'https://ubceprojects.netlify.app/about');
+        }
+    }, []);
+
     return (
         <div className="about-container">
             <MenuBar />

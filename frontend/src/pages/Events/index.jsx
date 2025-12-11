@@ -1,7 +1,7 @@
 import "./style.css";
 import MenuBar from "../../components/MenuBar";
 import EventItem from "../../components/Event";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import ImageTeamAccelerate from "/Doris_eProjects_Accelerate_2025-46.jpg";
 import Image2 from "/Group 39.svg";
 import Exec from "/Exec.png";
@@ -10,6 +10,18 @@ import Image3 from "/Sunny-EPROJ-Innovate-38.jpg";
 const Events = () => {
     const [activeIndex, setActiveIndex] = useState(0);
     const containerRef = useRef(null);
+
+    useEffect(() => {
+        document.title = "Events & Sponsorships | UBC eProjects";
+        const metaDescription = document.querySelector('meta[name="description"]');
+        if (metaDescription) {
+            metaDescription.setAttribute('content', 'Join UBC eProjects events including Launch Party, Innovate, Accelerate, and Executive Lounge. Connect with entrepreneurs and explore sponsorship opportunities.');
+        }
+        const canonical = document.querySelector('link[rel="canonical"]');
+        if (canonical) {
+            canonical.setAttribute('href', 'https://ubceprojects.netlify.app/events');
+        }
+    }, []);
     // const eventItemsRef = useRef([]);
 
     // Sample event data
