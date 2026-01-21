@@ -4,9 +4,10 @@ import EventItem from "../../components/Event";
 import { useRef, useState, useEffect } from "react";
 import ImageTeamAccelerate from "/Doris_eProjects_Accelerate_2025-46.jpg";
 import Image2 from "/Group 39.svg";
-import Exec from "/Exec.png";
 import Launch from "/LaunchParty.jpg";
 import Image3 from "/Sunny-EPROJ-Innovate-38.jpg";
+import EL from "/EL.jpg";
+import Workshop from "/workshop.png";
 const Events = () => {
     const [activeIndex, setActiveIndex] = useState(0);
     const containerRef = useRef(null);
@@ -45,11 +46,18 @@ const Events = () => {
             link: null, // No link for coming soon events
         },
         {
-            image: Exec,
-            title: "Executive Lounge Coming Soon..",
+            image: EL,
+            title: "Executive Lounge Night",
             description: "Executive Lounge is your chance to network with entrepreneurs, CEOs, and high-ranking executives in a formal setting. Enjoy gourmet appetizers, live jazz music, and a sophisticated venue while discovering new opportunities for professional growth.",
             link: null, // No link for coming soon events
         },
+        {
+            image: Workshop,
+            title: "Workshop Series Coming Soon..",
+            description: "Don’t miss this opportunity to meet THREE successful entrepreneurs who have decades of experience 3 Industries. 3 Weeks. ⚡️ Wednesday, January 21: Health & Biotech with Anthony Fejes ⚡️ Thursday, January 29: The Future of Cleantech with Claude Letourneau⚡️ Wednesday, February 4: Artificial Intelligence with Sev Geraskin",
+            link: null, // No link for coming soon events
+        },
+
     ];
 
     return (
