@@ -15,7 +15,7 @@ const About = () => {
         // Update canonical URL
         const canonical = document.querySelector('link[rel="canonical"]');
         if (canonical) {
-            canonical.setAttribute('href', 'https://ubceprojects.netlify.app/about');
+            canonical.setAttribute('href', 'https://eprojectsubc.com/about');
         }
     }, []);
 

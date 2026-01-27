@@ -2,5 +2,5 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://ubceprojects.netlify.app/sitemap.xml
+Sitemap: https://eprojectsubc.com/sitemap.xml
 

@@ -13,7 +13,7 @@ const Home = () => {
         }
         const canonical = document.querySelector('link[rel="canonical"]');
         if (canonical) {
-            canonical.setAttribute('href', 'https://ubceprojects.netlify.app/');
+            canonical.setAttribute('href', 'https://eprojectsubc.com/');
         }
     }, []);
 

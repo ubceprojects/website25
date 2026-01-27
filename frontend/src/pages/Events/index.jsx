@@ -20,7 +20,7 @@ const Events = () => {
         }
         const canonical = document.querySelector('link[rel="canonical"]');
         if (canonical) {
-            canonical.setAttribute('href', 'https://ubceprojects.netlify.app/events');
+            canonical.setAttribute('href', 'https://eprojectsubc.com/events');
         }
     }, []);
     // const eventItemsRef = useRef([]);

@@ -19,7 +19,7 @@ const MeetTheTeam = () => {
         }
         const canonical = document.querySelector('link[rel="canonical"]');
         if (canonical) {
-            canonical.setAttribute('href', 'https://ubceprojects.netlify.app/team');
+            canonical.setAttribute('href', 'https://eprojectsubc.com/team');
         }
     }, []);
 
