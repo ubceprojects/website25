@@ -9,3 +9,9 @@
   [headers.values]
     Content-Type = "text/plain; charset=utf-8"
 
+[[redirects]]
+  from = "/*"
+  to = "https://eprojectsubc.com/:splat"
+  status = 301
+  force = true
+
