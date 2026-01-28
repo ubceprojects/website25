@@ -95,6 +95,7 @@
     height: 40vw;
     margin: auto;
     margin-top: -10vw;
+    margin-left: 5vw;
     background: url("../journey-path.svg") no-repeat center;
     background-size: 70%;
 }
@@ -105,6 +106,8 @@
     flex-direction: column;
     justify-content: center;
     position: absolute;
+    /* shift all journey cards slightly left (heading stays centered) */
+    transform: translateX(-8vw);
 }
 
 .journey-1 {
@@ -305,6 +308,8 @@
         width: 80vw;
         margin: 3rem auto;
         text-align: center;
+        /* reset desktop offset on mobile */
+        transform: none;
     }
 
     .journey-1 {
