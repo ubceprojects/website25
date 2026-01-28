@@ -12,11 +12,27 @@
     background: url("../Justin-eProjects-Tech-Intra-Picks-18.jpg") no-repeat center;
     background-position: 50% 45%;
     background-size: cover;
+    position: relative;
+    overflow: hidden;
     margin: auto;
     margin-top: 3vw;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* dark overlay to fade the background image while keeping text bright */
+.about-heading::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+    z-index: 0;
+}
+
+.about-heading > * {
+    position: relative;
+    z-index: 1;
 }
 
 .about-heading h1 {
