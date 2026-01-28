@@ -142,6 +142,15 @@
     min-height: 400px;
 }
 
+.sponsors-svg {
+    width: 110%;
+    height: auto;
+    display: block;
+    position: relative;
+    top: -8rem; /* move image up slightly */
+    z-index: 1;
+}
+
 .sponsors-section img {
     width: 110%;
     height: auto;

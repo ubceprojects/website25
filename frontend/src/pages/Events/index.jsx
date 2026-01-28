@@ -3,7 +3,7 @@ import MenuBar from "../../components/MenuBar";
 import EventItem from "../../components/Event";
 import { useRef, useState, useEffect } from "react";
 import ImageTeamAccelerate from "/Doris_eProjects_Accelerate_2025-46.jpg";
-import Image2 from "/Events & Sponsorships.svg";
+import Image2 from "/Events & Sponsorships-01.svg";
 import Launch from "/LaunchParty.jpg";
 import Image3 from "/Sunny-EPROJ-Innovate-38.jpg";
 import EL from "/EL.jpg";

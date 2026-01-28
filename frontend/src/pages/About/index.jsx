@@ -70,7 +70,7 @@ const About = () => {
                     <GoalCard number={1} heading="Industry Immersion and Access" content="Foster stronger connections between students and entrepreneurs, offering firsthand industry insights and valuable relationships." />
                     <GoalCard
                         number={2}
-                        heading="Scaling Signature Events"
+                        heading="Scale with Purpose"
                         content="Expand our presence by maintaining flagship events and introducing large-scale programs to reach wider audiences and enhance networking. "
                     />
                     <GoalCard number={3} heading="Interdisciplinary Collaboration" content="Forge stronger partnerships with various clubs and campus services to underscore entrepreneurship's universal relevance across all academic and business fields." />
