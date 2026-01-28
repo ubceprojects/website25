@@ -43,7 +43,7 @@ const About = () => {
                 <div className="about-journey-card journey-1">
                     <div className="journey-number number-1 mobile-number">1</div>
                     <div className="journey-heading">2015 Founded</div>
-                    <div className="journey-content">Twelve friends came together in a basement, brainstorming ways to connect young entrepreneurs.</div>
+                    <div className="journey-content">Twelve friends came together to find ways to connect young entrepreneurs.</div>
                     <div className="journey-number number-1">1</div>
                 </div>
 

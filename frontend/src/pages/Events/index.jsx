@@ -53,7 +53,7 @@ const Events = () => {
         },
         {
             image: Workshop,
-            title: "Workshop Series Coming Soon..",
+            title: "Entreprenuer Exchange Coming Soon..",
             description: "Don’t miss this opportunity to meet THREE successful entrepreneurs who have decades of experience 3 Industries. 3 Weeks. ⚡️ Wednesday, January 21: Health & Biotech with Anthony Fejes ⚡️ Thursday, January 29: The Future of Cleantech with Claude Letourneau⚡️ Wednesday, February 4: Artificial Intelligence with Sev Geraskin",
             link: null, // No link for coming soon events
         },
