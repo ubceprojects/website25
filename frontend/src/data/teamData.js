@@ -178,7 +178,7 @@ const teamData = [
     email: "sehrawatparisha@gmail.com",
   },
 
-  // Marketing
+  // Marketing (Director, Design, Visual Media)
   {
     name: "Nathan Law",
     role: "Marketing Director",
@@ -189,9 +189,58 @@ const teamData = [
     instagram: "https://www.instagram.com/nathanlaw350",
     email: "law.nathan06@gmail.com",
   },
+  {
+    name: "Cathy Zhou",
+    role: "Design Coordinator",
+    type: "Current",
+    desc: "Dream big, stay kind and sparkle louder.",
+    img: cathyImg,
+    linkedin: null,
+    instagram: "https://www.instagram.com/cathy.z31",
+    email: "my_cathy@outlook.com",
+  },
+  {
+    name: "Minhal Hasnain",
+    role: "Design Coordinator",
+    type: "Current",
+    desc: "Punchlines, pranks, and plenty of thanks.",
+    img: minhalImg,
+    linkedin: "https://www.linkedin.com/in/minhal-hasnain-a8464b2b0/",
+    instagram: null,
+    email: "minhal.hasnain05@gmail.com",
+  },
+  {
+    name: "Eumi Finlayson",
+    role: "Visual Media Coordinator",
+    type: "Current",
+    desc: "I'm a curious mind with too many Google Docs open, and can make chaos look kind of coordinated.",
+    img: eumiImg,
+    linkedin: null,
+    instagram: "https://www.instagram.com/eumi_f",
+    email: "eumi.finlayson@gmail.com",
+  },
+  {
+    name: "Saraf Saiyara",
+    role: "Visual Media Coordinator",
+    type: "Current",
+    desc: "I speak fluent CapCut, raw footage, and \"Yes, this is the final final final edit\".",
+    img: sarafImg,
+    linkedin: "http://www.linkedin.com/in/sarafsaiyara",
+    instagram: "https://www.instagram.com/sarafsaiyara_",
+    email: "sarafsaiyara0@gmail.com",
+  },
 
-  // Corporate Relations
-  
+  // Corporate Relations (Director first, then Coordinators)
+  {
+    name: "Şerif Sav",
+    role: "Corporate Relations Director",
+    type: "Current",
+    desc: "Sheriff of UBC and Future President of Turkey",
+    img: serifImg,
+    linkedin: "https://www.linkedin.com/in/%C5%9Ferif-sherif-sav-511419326?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+    instagram: "https://www.instagram.com/seriffsavayev",
+    email: "serifsav02@gmail.com",
+  },
   {
     name: "Arielle Soukantima",
     role: "Corporate Relations Coordinator",
@@ -202,7 +251,6 @@ const teamData = [
     instagram: null,
     email: "ariellesktm@gmail.com",
   },
-  
   {
     name: "Miguel Pascual",
     role: "Corporate Relations Coordinator",
@@ -212,16 +260,6 @@ const teamData = [
     linkedin: "https://www.linkedin.com/in/miguel-david-pascual",
     instagram: null,
     email: "miggydescalona@gmail.com",
-  },
-  {
-    name: "Şerif Sav",
-    role: "Corporate Relations Director",
-    type: "Current",
-    desc: "Sheriff of UBC and Future President of Turkey",
-    img: serifImg,
-    linkedin: "https://www.linkedin.com/in/%C5%9Ferif-sherif-sav-511419326?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
-    instagram: "https://www.instagram.com/seriffsavayev",
-    email: "serifsav02@gmail.com",
   },
   {
     name: "Furqan Zaheer",
@@ -266,49 +304,6 @@ const teamData = [
     linkedin: null,
     instagram: null,
     email: null,
-  },
-
-  // Design & Media (not explicitly in your list but still in team)
-  
-  {
-    name: "Cathy Zhou",
-    role: "Design Coordinator",
-    type: "Current",
-    desc: "Dream big, stay kind and sparkle louder.",
-    img: cathyImg,
-    linkedin: null,
-    instagram: "https://www.instagram.com/cathy.z31",
-    email: "my_cathy@outlook.com",
-  },
-  {
-    name: "Minhal Hasnain",
-    role: "Design Coordinator",
-    type: "Current",
-    desc: "Punchlines, pranks, and plenty of thanks.",
-    img: minhalImg,
-    linkedin: "https://www.linkedin.com/in/minhal-hasnain-a8464b2b0/",
-    instagram: null,
-    email: "minhal.hasnain05@gmail.com",
-  },
-  {
-    name: "Eumi Finlayson",
-    role: "Visual Media Coordinator",
-    type: "Current",
-    desc: "I'm a curious mind with too many Google Docs open, and can make chaos look kind of coordinated.",
-    img: eumiImg,
-    linkedin: null,
-    instagram: "https://www.instagram.com/eumi_f",
-    email: "eumi.finlayson@gmail.com",
-  },
-  {
-    name: "Saraf Saiyara",
-    role: "Visual Media Coordinator",
-    type: "Current",
-    desc: "I speak fluent CapCut, raw footage, and \"Yes, this is the final final final edit\".",
-    img: sarafImg,
-    linkedin: "http://www.linkedin.com/in/sarafsaiyara",
-    instagram: "https://www.instagram.com/sarafsaiyara_",
-    email: "sarafsaiyara0@gmail.com",
   },
 ];
 

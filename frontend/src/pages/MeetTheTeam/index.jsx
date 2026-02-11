@@ -32,11 +32,11 @@ const MeetTheTeam = () => {
         // Clear existing options first
         teamFilter.innerHTML = '<option value="">Filter by Team</option>';
 
-        const teamOptions = ["Presidential", "Finance", "Technology", "Operations", "Marketing", "Corporate Relations", "Internal"];
+        const teamOptions = ["Presidential", "Finance", "Technology", "Operations", "Marketing", "Corporate Relations", "Internal", "First Year Reps"];
 
         teamOptions.forEach((team) => {
             const option = document.createElement("option");
-            option.value = team.toLowerCase().replace(" ", "-");
+            option.value = team.toLowerCase().replaceAll(" ", "-");
             option.textContent = team;
             teamFilter.appendChild(option);
         });
@@ -89,6 +89,10 @@ const MeetTheTeam = () => {
                 // Internal team
                 else if (team === "internal") {
                     return role.includes("internal");
+                }
+                // First Year Reps
+                else if (team === "first-year-reps") {
+                    return role.includes("first year representative");
                 }
 
                 return false;
