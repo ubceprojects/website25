@@ -20,12 +20,15 @@ import sophieImg from '/Sophie_Bhatia.jpg';
 import tiffanyImg from '/Tiffany-Hersa.jpeg';
 import arlienImg from '/Arielle-Soukantima.JPG';
 import chiragImg from '/Chirag-Mishra.png';
+import elyzaImg from '/Elyza.jpg';
+import joannaImg from '/Joanna.JPG';
+import furqanImg from '/Furqan.PNG';
 
 const images = [
   alisaImg, shinjiniImg, angelaImg, aidenImg,
   benImg, cathyImg, dakshImg, dalaImg, eumiImg, fionaImg, jeremyImg, kianImg, miguelImg, minhalImg, nathanImg,
   parishaImg, sarafImg, serifImg, sophieImg, tiffanyImg,  
-  arlienImg, chiragImg, 
+  arlienImg, chiragImg, elyzaImg, joannaImg, furqanImg,
 ];
 
 export const preloadImages = () => {
@@ -212,13 +215,23 @@ const teamData = [
   },
   {
     name: "Şerif Sav",
-    role: "Corporate Relations Coordinator",
+    role: "Corporate Relations Director",
     type: "Current",
     desc: "Sheriff of UBC and Future President of Turkey",
     img: serifImg,
     linkedin: "https://www.linkedin.com/in/%C5%9Ferif-sherif-sav-511419326?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
     instagram: "https://www.instagram.com/seriffsavayev",
     email: "serifsav02@gmail.com",
+  },
+  {
+    name: "Furqan Zaheer",
+    role: "Corporate Relations Coordinator",
+    type: "Current",
+    desc: "",
+    img: furqanImg,
+    linkedin: null,
+    instagram: null,
+    email: null,
   },
 
   // Internal
@@ -231,6 +244,28 @@ const teamData = [
     linkedin: "http://linkedin.com/in/chiragmishra07",
     instagram: null,
     email: "mishra.chirag2879@gmail.com",
+  },
+
+  // First Year Representatives
+  {
+    name: "Elyza Castro",
+    role: "First Year Representative",
+    type: "Current",
+    desc: "",
+    img: elyzaImg,
+    linkedin: null,
+    instagram: null,
+    email: null,
+  },
+  {
+    name: "Joanna Yin",
+    role: "First Year Representative",
+    type: "Current",
+    desc: "",
+    img: joannaImg,
+    linkedin: null,
+    instagram: null,
+    email: null,
   },
 
   // Design & Media (not explicitly in your list but still in team)

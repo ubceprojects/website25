@@ -12,18 +12,6 @@ const MeetTheTeam = () => {
     const [filteredTeam, setFilteredTeam] = useState(teamData);
 
     useEffect(() => {
-        document.title = "Meet The Team | UBC eProjects - 2025/26 Executive Team";
-        const metaDescription = document.querySelector('meta[name="description"]');
-        if (metaDescription) {
-            metaDescription.setAttribute('content', 'Meet the UBC eProjects 2025/26 executive team. Get to know the students leading entrepreneurship initiatives at the University of British Columbia.');
-        }
-        const canonical = document.querySelector('link[rel="canonical"]');
-        if (canonical) {
-            canonical.setAttribute('href', 'https://eprojectsubc.com/team');
-        }
-    }, []);
-
-    useEffect(() => {
         preloadImages();
         // Role filter options
         const roleFilter = document.querySelector(".role-filter");
