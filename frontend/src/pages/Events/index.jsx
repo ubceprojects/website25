@@ -7,7 +7,10 @@ import Image2 from "/Events & Sponsorships-01.svg";
 import Launch from "/LaunchParty.jpg";
 import Image3 from "/Sunny-EPROJ-Innovate-38.jpg";
 import EL from "/EL.jpg";
-import Workshop from "/workshop.png";
+import work from "../../../public/work.jpg";
+import ascent from "../../../public/DSCF1798.jpg";
+import companycrawl from "../../../public/crawl.jpeg";
+import catalyst from "../../../public/cataclyst.png";
 const Events = () => {
     const [activeIndex, setActiveIndex] = useState(0);
     const containerRef = useRef(null);
@@ -52,9 +55,27 @@ const Events = () => {
             link: null, // No link for coming soon events
         },
         {
-            image: Workshop,
-            title: "Entreprenuer Exchange Coming Soon..",
-            description: "Don’t miss this opportunity to meet THREE successful entrepreneurs who have decades of experience 3 Industries. 3 Weeks. ⚡️ Wednesday, January 21: Health & Biotech with Anthony Fejes ⚡️ Thursday, January 29: The Future of Cleantech with Claude Letourneau⚡️ Wednesday, February 4: Artificial Intelligence with Sev Geraskin",
+            image: work,
+            title: "Workshop Series",
+            description: "Over the course of three weeks, you gained industry insights, spoke with CEOs, and become experts in biotech, cleantech, and AI startups. Thanks to Anthony Fejes, Claude Letourneau, and Sev Geraskin for sharing their knowledge and experience with us.",
+            link: null, // No link for coming soon events
+        }, 
+        {
+            image: ascent,
+            title: "Ascent",
+            description: "🚀ASCENT was incredible and it wouldn’t have been possible without you 🫵 We brought together an inspiring community of entrepreneurs and innovators, and the energy in the room was unmatched. Thank you for joining us this year, and a special thank you to EY for hosting us at their office ✨",
+            link: null, // No link for coming soon events
+        },
+        {
+            image: companycrawl,
+            title: "Company Crawl",
+            description: "THANK YOU to everyone who attended company crawl! 💙🏙️ We hope you had a blast exploring four different offices across downtown Vancouver’s corporate scene and meeting real-world industry professionals 📈🤩. Thanks to Amazon, Microsoft, YLaw, and GeoComply!",
+            link: null, // No link for coming soon events
+        },
+        {
+            image: catalyst,
+            title: "Catalyst",
+            description: "Ready to spark your future? 🌟 Catalyst is an event designed to ignite your career and connect you with industry leaders! ✨Key insights from two industry professionals on the effects of digital networks and artificial intelligence on startups📱. Hands-on pitching activity collaborating with peers and business leaders 🚀. Networking and connections that catalyze ideas into action 🔗. 📅March 31 | 5:45 PM – 8:00 PM 📍Birmingham, Sauder School of Business (Food & drinks provided) 👔Business casual",
             link: null, // No link for coming soon events
         },
 
