@@ -120,7 +120,6 @@ const Masonry = ({ items, ease = "power3.out", duration = 0.6, stagger = 0.05, a
 
         const handleScroll = () => {
             const scrollThreshold = 2700; // <-- Change this to your desired scrollY value
-            console.log(window.scrollY);
 
             if (window.scrollY > scrollThreshold && !hasAnimatedRef.current && imagesReady) {
                 hasAnimatedRef.current = true;
