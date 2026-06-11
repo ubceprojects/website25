@@ -2,7 +2,20 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <link rel="icon" type="image/svg+xml" href="/logo-min.png" />
+        <link rel="icon" type="image/png" href="/logo-min.png" />
+
+        <!-- Preconnect to third-party origins to speed up font & icon loading -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="preconnect" href="https://kit.fontawesome.com" />
+        <link rel="preconnect" href="https://ka-f.fontawesome.com" crossorigin />
+
+        <!-- Google Fonts loaded here (not via a CSS @import) so the browser discovers them on the first HTML parse instead of after the bundled CSS downloads. Poppins trimmed to the weights actually used (200–800). -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Poppins:ital,wght@0,200;0,400;0,500;0,600;0,700;0,800;1,200;1,400;1,500;1,600;1,700;1,800&display=swap" />
+
+        <!-- Preload the hero illustration (the LCP element) so it fetches in parallel with the JS instead of after React mounts. -->
+        <link rel="preload" as="image" href="/Website Illustration-04.svg" type="image/svg+xml" />
+
         <link rel="stylesheet" href="/style.css" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         
@@ -66,6 +79,6 @@
     <body>
         <div id="root"></div>
         <script type="module" src="/src/main.jsx"></script>
-        <script src="https://kit.fontawesome.com/410f94a1ed.js" crossorigin="anonymous"></script>
+        <script defer src="https://kit.fontawesome.com/410f94a1ed.js" crossorigin="anonymous"></script>
     </body>
 </html>
