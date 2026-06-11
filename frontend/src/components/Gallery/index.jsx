@@ -1,125 +1,117 @@
 import Masonry from "../Masonry";
 import "./style.css";
-import { useEffect } from "react";
 
 const Gallery = () => {
     const items = [
         {
             id: "1",
-            img: "/gallery/1.avif",
+            img: "/gallery/1.webp",
             height: 500,
             title: "Executive Dinner Night",
         },
         {
             id: "2",
-            img: "/gallery/2.avif",
+            img: "/gallery/2.webp",
             height: 360,
             title: "Company Crawl at TTT Studios",
         },
         {
             id: "3",
-            img: "/gallery/3.avif",
+            img: "/gallery/3.webp",
             height: 510,
             title: "Company Crawl at KPMG",
         },
         {
             id: "4",
-            img: "/gallery/4.avif",
+            img: "/gallery/4.webp",
             height: 400,
             title: "Company Crawl at TTT Studios",
         },
         {
             id: "5",
-            img: "/gallery/5.avif",
+            img: "/gallery/5.webp",
             height: 400,
             title: "eProjects Launch Event",
         },
         {
             id: "6",
-            img: "/gallery/6.avif",
+            img: "/gallery/6.webp",
             height: 300,
             title: "eProjects Launch Event",
         },
         {
             id: "7",
-            img: "/gallery/7.avif",
+            img: "/gallery/7.webp",
             height: 400,
             title: "eProjects Launch Event",
         },
         {
             id: "8",
-            img: "/gallery/8.avif",
+            img: "/gallery/8.webp",
             height: 500,
             title: "eProjects Launch Event",
         },
         {
             id: "9",
-            img: "/gallery/9.avif",
+            img: "/gallery/9.webp",
             height: 625,
             title: "eProjects Launch Event",
         },
         {
             id: "10",
-            img: "/gallery/10.avif",
+            img: "/gallery/10.webp",
             height: 700,
             title: "eProjects Launch Event",
         },
         {
             id: "11",
-            img: "/gallery/11.avif",
+            img: "/gallery/11.webp",
             height: 400,
             title: "Tech Intrapreneur Event",
         },
         {
             id: "12",
-            img: "/gallery/12.avif",
+            img: "/gallery/12.webp",
             height: 900,
             title: "Tech Intrapreneur Event",
         },
         {
             id: "13",
-            img: "/gallery/13.avif",
+            img: "/gallery/13.webp",
             height: 1110,
             title: "Tech Intrapreneur Event",
         },
         {
             id: "14",
-            img: "/gallery/14.avif",
+            img: "/gallery/14.webp",
             height: 500,
             title: "Tech Intrapreneur Event",
         },
         {
             id: "15",
-            img: "/gallery/15.avif",
+            img: "/gallery/15.webp",
             height: 500,
             title: "eProjects Launch Event",
         },
         {
             id: "16",
-            img: "/gallery/16.avif",
+            img: "/gallery/16.webp",
             height: 545,
             title: "eProjects Launch Event",
         },
         {
             id: "17",
-            img: "/gallery/17.avif",
+            img: "/gallery/17.webp",
             height: 500,
             title: "eProjects Launch Event",
         },
         {
             id: "18",
-            img: "/gallery/18.avif",
+            img: "/gallery/18.webp",
             height: 410,
             title: "eProjects Social",
         },
     ];
-
-    useEffect(() => {
-        items.forEach(({ img }) => {
-            const image = new Image();
-            image.src = img;
-        });
-    }, [items]);
 
     return (
         <div className="gallery-photos">

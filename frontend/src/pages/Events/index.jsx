@@ -7,10 +7,10 @@ import Image2 from "/Events & Sponsorships-01.svg";
 import Launch from "/LaunchParty.jpg";
 import Image3 from "/Sunny-EPROJ-Innovate-38.jpg";
 import EL from "/EL.jpg";
-import work from "../../../public/work.jpg";
-import ascent from "../../../public/DSCF1798.jpg";
-import companycrawl from "../../../public/crawl.jpeg";
-import catalyst from "../../../public/cataclyst.png";
+import work from "/work.jpg";
+import ascent from "/DSCF1798.jpg";
+import companycrawl from "/crawl.jpeg";
+import catalyst from "/cataclyst.webp";
 const Events = () => {
     const [activeIndex, setActiveIndex] = useState(0);
     const containerRef = useRef(null);
