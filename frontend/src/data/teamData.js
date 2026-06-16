@@ -3,7 +3,7 @@ import shinjiniImg from '/ebb33bbaaa50a9fba08252e8c3ed9727d1bc3cae.jpg';
 import angelaImg from '/0d756c3cc9da32972899a87c1b232d0f6e78a600.jpg';
 import aidenImg from '/Aiden-Ng.jpg';
 import benImg from '/Ben-Hoppe.jpg';
-import cathyImg from '/Cathy-Zhou.png';
+import cathyImg from '/Cathy-Zhou.jpg';
 import dakshImg from '/Daksh-Mathur.jpg';
 import dalaImg from '/Dala-Malaya-Sosa.jpeg';
 import eumiImg from '/Eumi-Finlayson.JPG';
@@ -19,24 +19,10 @@ import serifImg from '/Serif-Sav.jpeg';
 import sophieImg from '/Sophie_Bhatia.jpg';
 import tiffanyImg from '/Tiffany-Hersa.jpeg';
 import arlienImg from '/Arielle-Soukantima.JPG';
-import chiragImg from '/Chirag-Mishra.png';
+import chiragImg from '/Chirag-Mishra.jpg';
 import elyzaImg from '/Elyza.jpg';
 import joannaImg from '/Joanna.JPG';
-import furqanImg from '/Furqan.PNG';
-
-const images = [
-  alisaImg, shinjiniImg, angelaImg, aidenImg,
-  benImg, cathyImg, dakshImg, dalaImg, eumiImg, fionaImg, jeremyImg, kianImg, miguelImg, minhalImg, nathanImg,
-  parishaImg, sarafImg, serifImg, sophieImg, tiffanyImg,  
-  arlienImg, chiragImg, elyzaImg, joannaImg, furqanImg,
-];
-
-export const preloadImages = () => {
-  images.forEach(src => {
-    const img = new Image();
-    img.src = src;
-  });
-};
+import furqanImg from '/Furqan.jpg';
 
 const teamData = [
   // Presidential

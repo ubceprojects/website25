@@ -31,3 +31,25 @@
     border-radius: 10px;
     box-shadow: 0px 10px 50px -10px rgba(0, 0, 0, 0.2);
 }
+
+/* Hover overlay (driven by CSS :hover instead of JS) */
+.color-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: var(--font-custom);
+    font-size: 1.3vw;
+    text-transform: capitalize;
+}
+
+.item-wrapper:hover .color-overlay {
+    opacity: 1;
+}

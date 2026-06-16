@@ -48,10 +48,10 @@ const EventItem = ({ index, image, title, description, setActiveIndex, link }) =
             <div className="event-image-container">
                 {link ? (
                     <a href={link} target="_blank" rel="noopener noreferrer">
-                        <img src={image} alt={title} className="event-image" />
+                        <img src={image} alt={title} className="event-image" loading="lazy" decoding="async" />
                     </a>
                 ) : (
-                    <img src={image} alt={title} className="event-image" />
+                    <img src={image} alt={title} className="event-image" loading="lazy" decoding="async" />
                 )}
             </div>
             <div className="event-content">

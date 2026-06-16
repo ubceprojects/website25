@@ -3,7 +3,6 @@ import MenuBar from "../../components/MenuBar";
 import ProfileCard from "../../components/ProfileCard";
 import teamData from "../../data/teamData.js";
 import { useEffect, useState } from "react";
-import { preloadImages } from "../../data/teamData.js";
 
 const MeetTheTeam = () => {
     const [searchTerm, setSearchTerm] = useState("");
@@ -12,7 +11,6 @@ const MeetTheTeam = () => {
     const [filteredTeam, setFilteredTeam] = useState(teamData);
 
     useEffect(() => {
-        preloadImages();
         // Role filter options
         const roleFilter = document.querySelector(".role-filter");
         // Clear existing options first

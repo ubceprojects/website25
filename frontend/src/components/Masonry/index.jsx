@@ -1,5 +1,5 @@
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
-import { gsap } from "gsap";
+import { motion } from "motion/react";
 
 import "./Masonry.css";
 
@@ -52,41 +52,6 @@ const Masonry = ({ items, ease = "power3.out", duration = 0.6, stagger = 0.05, a
     const columns = useMedia(["(min-width:1500px)", "(min-width:1000px)", "(min-width:600px)", "(min-width:400px)"], [5, 4, 3, 2], 1);
 
     const [containerRef, { width }] = useMeasure();
-    const [imagesReady, setImagesReady] = useState(false);
-
-    const getInitialPosition = (item) => {
-        const containerRect = containerRef.current?.getBoundingClientRect();
-        if (!containerRect) return { x: item.x, y: item.y };
-
-        let direction = animateFrom;
-
-        if (animateFrom === "random") {
-            const directions = ["top", "bottom", "left", "right"];
-            direction = directions[Math.floor(Math.random() * directions.length)];
-        }
-
-        switch (direction) {
-            case "top":
-                return { x: item.x, y: -200 };
-            case "bottom":
-                return { x: item.x, y: window.innerHeight + 200 };
-            case "left":
-                return { x: -200, y: item.y };
-            case "right":
-                return { x: window.innerWidth + 200, y: item.y };
-            case "center":
-                return {
-                    x: containerRect.width / 2 - item.w / 2,
-                    y: containerRect.height / 2 - item.h / 2,
-                };
-            default:
-                return { x: item.x, y: item.y + 100 };
-        }
-    };
-
-    useEffect(() => {
-        preloadImages(items.map((i) => i.img)).then(() => setImagesReady(true));
-    }, [items]);
 
     const grid = useMemo(() => {
         if (!width) return [];
@@ -95,7 +60,7 @@ const Masonry = ({ items, ease = "power3.out", duration = 0.6, stagger = 0.05, a
         const columnWidth = width / columns;
         const gap = 20; // Gap between items
         const padding = 30; // Padding around items
-        
+
         // Calculate total grid width to center it
         const totalGridWidth = (columns * columnWidth) + ((columns - 1) * gap);
         const startOffset = (width - totalGridWidth) / 2;
@@ -112,145 +77,56 @@ const Masonry = ({ items, ease = "power3.out", duration = 0.6, stagger = 0.05, a
         });
     }, [columns, items, width]);
 
-    const hasMounted = useRef(false);
-    const hasAnimatedRef = useRef(false);
+    // The tiles are absolutely positioned, so the container needs an explicit
+    // height to reserve their vertical space.
+    const containerHeight = grid.length ? Math.max(...grid.map((i) => i.y + i.h)) : 0;
 
-    useLayoutEffect(() => {
-        if (!imagesReady) return;
-
-        const handleScroll = () => {
-            const scrollThreshold = 2700; // <-- Change this to your desired scrollY value
-            console.log(window.scrollY);
-
-            if (window.scrollY > scrollThreshold && !hasAnimatedRef.current && imagesReady) {
-                hasAnimatedRef.current = true;
-
-                grid.forEach((item, index) => {
-                    const selector = `[data-key="${item.id}"]`;
-                    const initialPos = getInitialPosition(item, index);
-                    const animationProps = {
-                        x: item.x,
-                        y: item.y,
-                        width: item.w,
-                        height: item.h,
-                    };
-
-                    gsap.fromTo(
-                        selector,
-                        {
-                            opacity: 0,
-                            x: initialPos.x,
-                            y: initialPos.y,
-                            width: item.w,
-                            height: item.h,
-                            ...(blurToFocus && { filter: "blur(10px)" }),
-                        },
-                        {
-                            opacity: 1,
-                            ...animationProps,
-                            ...(blurToFocus && { filter: "blur(0px)" }),
-                            duration: 0.8,
-                            ease: "power3.out",
-                            delay: index * stagger,
-                        }
-                    );
-                });
-                hasMounted.current = true;
-            }
-        };
-
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
-
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [grid, imagesReady, stagger, animateFrom, blurToFocus, duration, ease]);
-
-    const handleMouseEnter = (e, item) => {
-        const element = e.currentTarget;
-        const selector = `[data-key="${item.id}"]`;
-
-        if (scaleOnHover) {
-            gsap.to(selector, {
-                scale: hoverScale,
-                duration: 0.3,
-                ease: "power2.out",
-            });
-        }
-
-        if (colorShiftOnHover) {
-            const overlay = element.querySelector(".color-overlay");
-            if (overlay) {
-                gsap.to(overlay, {
-                    opacity: 1,
-                    duration: 0.3,
-                });
-            }
+    // Transform offset (relative to a tile's resting position) that each tile
+    // animates in from. "center" converges every tile from the container middle.
+    const getEntranceOffset = (item) => {
+        switch (animateFrom) {
+            case "top":
+                return { x: 0, y: -80 };
+            case "bottom":
+                return { x: 0, y: 80 };
+            case "left":
+                return { x: -80, y: 0 };
+            case "right":
+                return { x: 80, y: 0 };
+            case "center":
+                return {
+                    x: width / 2 - (item.x + item.w / 2),
+                    y: containerHeight / 2 - (item.y + item.h / 2),
+                };
+            default:
+                return { x: 0, y: 40 };
         }
     };
 
-    const handleMouseLeave = (e, item) => {
-        const element = e.currentTarget;
-        const selector = `[data-key="${item.id}"]`;
-
-        if (scaleOnHover) {
-            gsap.to(selector, {
-                scale: 1,
-                duration: 0.3,
-                ease: "power2.out",
-            });
-        }
-
-        if (colorShiftOnHover) {
-            const overlay = element.querySelector(".color-overlay");
-            if (overlay) {
-                gsap.to(overlay, {
-                    opacity: 0,
-                    duration: 0.3,
-                });
-            }
-        }
-    };
+    // Warm the image cache so tiles don't pop in as they reveal.
+    useEffect(() => {
+        preloadImages(items.map((i) => i.img));
+    }, [items]);
 
     return (
-        <div ref={containerRef} className="list">
-            {grid.map((item) => {
+        <div ref={containerRef} className="list" style={{ height: containerHeight }}>
+            {grid.map((item, index) => {
+                const offset = getEntranceOffset(item);
                 return (
-                    <div
+                    <motion.div
                         key={item.id}
-                        data-key={item.id}
                         className="item-wrapper"
-                        onClick={() => {}} // Modify this
-                        onMouseEnter={(e) => handleMouseEnter(e, item)}
-                        onMouseLeave={(e) => handleMouseLeave(e, item)}
+                        style={{ left: item.x, top: item.y, width: item.w, height: item.h }}
+                        initial={{ opacity: 0, x: offset.x, y: offset.y, filter: blurToFocus ? "blur(10px)" : "blur(0px)" }}
+                        whileInView={{ opacity: 1, x: 0, y: 0, filter: "blur(0px)" }}
+                        viewport={{ once: true, amount: 0.1 }}
+                        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: index * stagger }}
+                        whileHover={scaleOnHover ? { scale: hoverScale } : undefined}
                     >
                         <div className="item-img" style={{ backgroundImage: `url(${item.img})` }}>
-                            {colorShiftOnHover && (
-                                <div
-                                    className="color-overlay"
-                                    style={{
-                                        position: "absolute",
-                                        top: 0,
-                                        left: 0,
-                                        width: "100%",
-                                        height: "100%",
-                                        background: "rgba(0, 0, 0, 0.4)",
-                                        opacity: 0,
-                                        pointerEvents: "none",
-                                        borderRadius: "8px",
-                                        display: "flex",
-                                        justifyContent: "center",
-                                        alignItems: "center",
-                                        color: "white",
-                                        fontFamily: "var(--font-custom)",
-                                        fontSize: "1.3vw",
-                                        textTransform: "capitalize",
-                                    }}
-                                >
-                                    {item.title}
-                                </div>
-                            )}
+                            {colorShiftOnHover && <div className="color-overlay">{item.title}</div>}
                         </div>
-                    </div>
+                    </motion.div>
                 );
             })}
         </div>
