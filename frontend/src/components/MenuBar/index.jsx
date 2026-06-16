@@ -1,32 +1,24 @@
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import "./style.css";
-import gsap from "gsap";
+import { motion, AnimatePresence } from "motion/react";
 import { useNavigate } from "react-router-dom";
 
-const MenuBar = ({ type = "" }) => {
-    const menuBarRef = useRef(null);
+const menuVariants = {
+    closed: { x: "100%" },
+    open: {
+        x: 0,
+        transition: { duration: 0.3, ease: "easeOut", staggerChildren: 0.1, delayChildren: 0.1 },
+    },
+};
+
+const itemVariants = {
+    closed: { x: 50, opacity: 0 },
+    open: { x: 0, opacity: 1 },
+};
+
+const MenuBar = () => {
     const navigate = useNavigate();
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-    const mobileMenuRef = useRef(null);
-
-    useEffect(() => {
-        if (type === "home") {
-            setTimeout(() => {
-                gsap.fromTo(menuBarRef.current, { y: -100, opacity: 0 }, { y: 20, opacity: 1, duration: 1, ease: "power2.out" });
-                gsap.fromTo(".menu-item", { y: -100, opacity: 0 }, { y: 0, opacity: 1, stagger: 0.1, delay: 0.7, duration: 1, ease: "power2.out" });
-            }, 1500);
-        }
-    }, []);
-
-    // Animate mobile menu opening
-    useEffect(() => {
-        if (isMobileMenuOpen) {
-            const tl = gsap.timeline();
-            tl.fromTo(mobileMenuRef.current, { x: "100%" }, { x: "0%", duration: 0.3, ease: "power2.out" })
-                .fromTo(".mobile-menu .menu-item", { x: 50, opacity: 0 }, { x: 0, opacity: 1, duration: 0.3, stagger: 0.15, ease: "power3.out" }, "-=0.2")
-                .fromTo(".mobile-menu .menu-socials i", { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.3, stagger: 0.1, ease: "back.out(1.7)" }, "-=0.3");
-        }
-    }, [isMobileMenuOpen]);
 
     const handleNav = (path) => {
         setIsMobileMenuOpen(false);
@@ -35,13 +27,7 @@ const MenuBar = ({ type = "" }) => {
 
     return (
         <>
-            <div
-                ref={menuBarRef}
-                className="menu-bar"
-                style={{
-                    transform: type === "home" && !sessionStorage.getItem("home-animated") ? "translateY(-100%)" : "translateY(25%)",
-                }}
-            >
+            <div className="menu-bar">
                 <div className="menu-item menu-logo">
                     <img src="/logo-min.png" alt="Bulb Logo" width={50} height={50} className="rounded-full logo" />
                 </div>
@@ -72,28 +58,32 @@ const MenuBar = ({ type = "" }) => {
             </div>
 
             {/* Mobile Slide-in Menu */}
-            <div ref={mobileMenuRef} className={`mobile-menu ${isMobileMenuOpen ? "open" : ""}`}>
-                <div className="close-btn" onClick={() => setIsMobileMenuOpen(false)}>
-                    <i className="fa-solid fa-xmark"></i>
-                </div>
-                <div className="menu-item hover" onClick={() => handleNav("/")}>
-                    Home
-                </div>
-                <div className="menu-item hover" onClick={() => handleNav("/about")}>
-                    About Us
-                </div>
-                <div className="menu-item hover" onClick={() => handleNav("/team")}>
-                    Meet the Team
-                </div>
-                <div className="menu-item hover" onClick={() => handleNav("/events")}>
-                    Events & Sponsors
-                </div>
-                <div className="menu-socials">
-                    <i className="fa-brands fa-linkedin-in"></i>
-                    <i className="fa-brands fa-instagram"></i>
-                    <i className="fa-solid fa-envelope"></i>
-                </div>
-            </div>
+            <AnimatePresence>
+                {isMobileMenuOpen && (
+                    <motion.div className="mobile-menu" variants={menuVariants} initial="closed" animate="open" exit="closed">
+                        <div className="close-btn" onClick={() => setIsMobileMenuOpen(false)}>
+                            <i className="fa-solid fa-xmark"></i>
+                        </div>
+                        <motion.div className="menu-item hover" variants={itemVariants} onClick={() => handleNav("/")}>
+                            Home
+                        </motion.div>
+                        <motion.div className="menu-item hover" variants={itemVariants} onClick={() => handleNav("/about")}>
+                            About Us
+                        </motion.div>
+                        <motion.div className="menu-item hover" variants={itemVariants} onClick={() => handleNav("/team")}>
+                            Meet the Team
+                        </motion.div>
+                        <motion.div className="menu-item hover" variants={itemVariants} onClick={() => handleNav("/events")}>
+                            Events & Sponsors
+                        </motion.div>
+                        <motion.div className="menu-socials" variants={itemVariants}>
+                            <i className="fa-brands fa-linkedin-in"></i>
+                            <i className="fa-brands fa-instagram"></i>
+                            <i className="fa-solid fa-envelope"></i>
+                        </motion.div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </>
     );
 };
